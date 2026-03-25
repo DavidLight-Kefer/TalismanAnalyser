@@ -1,0 +1,1063 @@
+Ballistics,2,Tetrad Shot,1,Weakness Exploit,1,0,0,0,1,0,0
+Horn Maestro,1,Partbreaker,1,Adaptability,2,1,1,0,0,0,0
+Opening Shot,1,Power Prolonger,1,Elemental Absorption,1,1,0,0,0,0,0
+Protective Polish,1,Weakness Exploit,1,,0,1,1,0,0,0,0
+Guard,1,Critical Draw,1,Elemental Absorption,1,1,1,0,0,0,0
+Critical Element,3,Fire Resistance,3,,0,1,1,0,1,0,0
+Critical Eye,1,Latent Power,1,,0,2,1,0,0,0,0
+Critical Element,3,Burst,1,,0,1,1,0,0,0,0
+Guard Up,3,Stamina Surge,1,Recovery Speed,1,1,1,0,0,0,0
+Load Shells,2,Attack Boost,1,Adrenaline Rush,1,0,0,0,1,0,0
+Guard Up,1,Blight Resistance,1,Recovery Speed,2,1,1,0,0,0,0
+Attack Boost,1,Coalescence,2,,0,3,0,0,0,0,0
+Razor Sharp,1,Partbreaker,1,Tremor Resistance,2,1,1,0,0,0,0
+Artillery,3,Elemental Absorption,1,,0,1,1,0,0,0,0
+Opening Shot,1,Guard,1,Thunder Resistance,3,2,0,0,0,0,0
+Mind's Eye,1,Punishing Draw,1,Iron Skin,3,1,1,0,0,0,0
+Thunder Attack,2,Evade Extender,1,Wide-Range,3,2,0,0,0,0,0
+Mind's Eye,1,Attack Boost,1,Item Prolonger,3,1,0,0,0,0,0
+Poison Attack,2,Resentment,2,,0,2,0,0,0,0,0
+Offensive Guard,2,Paralysis Resistance,2,Poison Resistance,2,1,1,0,0,0,0
+Razor Sharp,2,Handicraft,1,Defense Boost,4,0,0,0,1,0,0
+Guard Up,3,Latent Power,1,,0,2,0,0,0,0,0
+Offensive Guard,1,Speed Eating,2,Tremor Resistance,2,2,0,0,0,0,0
+Attack Boost,2,Counterstrike,1,Tool Specialist,2,1,1,0,0,0,0
+Exhaust Functionality,1,Burst,1,,0,2,0,0,0,0,0
+Speed Sharpening,1,Defense Boost,4,,0,2,0,0,0,0,0
+Sleep Attack,3,Thunder Resistance,3,,0,1,1,0,0,0,0
+Critical Status,1,Recovery Up,2,Geologist,2,2,1,0,0,0,0
+Paralysis Attack,1,Flayer,1,,0,2,1,0,0,0,0
+Blast Attack,3,Marathon Runner,2,Adaptability,1,0,0,0,1,0,0
+Bludgeoner,1,Partbreaker,1,Stench Resistance,2,1,1,0,0,0,0
+Critical Eye,1,Coalescence,2,,0,2,1,0,0,0,0
+Poison Duration Up,1,Razor Sharp,1,Tool Specialist,2,1,1,0,0,0,0
+Blast Attack,1,Divine Blessing,3,,0,3,0,0,0,0,0
+Speed Sharpening,1,Power Prolonger,1,Sleep Resistance,3,1,0,0,0,0,0
+Critical Draw,3,Adaptability,2,Recovery Speed,1,0,0,0,1,0,0
+Mind's Eye,2,Peak Performance,1,Heroics,2,1,0,0,0,0,0
+Opening Shot,2,Agitator,1,,0,2,0,0,0,0,0
+Paralysis Attack,2,Earplugs,1,Coalescence,1,1,0,0,0,0,0
+Slugger,1,Marathon Runner,3,,0,2,1,0,0,0,0
+Fire Attack,1,Blight Resistance,2,,0,1,1,0,0,0,0
+Fire Attack,1,Thunder Resistance,2,Iron Skin,2,2,0,0,0,0,0
+Power Prolonger,2,Heroics,3,,0,2,0,0,0,0,0
+Special Ammo Boost,1,Flayer,1,,0,1,1,0,0,0,0
+Slugger,1,Intimidator,3,,0,1,1,0,0,0,0
+Offensive Guard,2,Speed Eating,2,Constitution,3,1,0,0,0,0,0
+Load Shells,1,Sleep Resistance,3,,0,3,0,0,0,0,0
+Artillery,1,Heroics,3,,0,2,0,0,0,0,0
+Poison Attack,1,Evade Window,2,Sleep Resistance,2,1,1,0,0,0,0
+Tetrad Shot,2,Adrenaline Rush,1,,0,1,0,0,0,0,0
+Horn Maestro,1,Paralysis Attack,1,Intimidator,3,2,1,0,0,0,0
+Rapid Morph,1,Survival Expert,3,,0,3,0,0,0,0,0
+Water Attack,1,Coalescence,2,,0,2,0,0,0,0,0
+Protective Polish,2,Stamina Thief,1,Critical Eye,1,1,0,0,1,0,0
+Blast Attack,2,Tool Specialist,2,Water Resistance,2,1,0,0,0,0,0
+Bludgeoner,1,Hunger Resistance,3,,0,3,0,0,0,0,0
+Spread/Power Shots,1,Hunger Resistance,2,Stun Resistance,1,2,0,0,0,0,0
+Focus,2,Coalescence,1,Aquatic/Oilsilt Mobility,2,1,0,0,0,0,0
+Guard Up,1,Heroics,3,,0,2,0,0,0,0,0
+Critical Eye,1,Paralysis Attack,1,Paralysis Resistance,3,2,1,0,0,0,0
+Water Attack,1,Maximum Might,1,Wide-Range,3,3,0,0,0,0,0
+Artillery,3,Peak Performance,1,Fire Resistance,1,2,0,0,0,0,0
+Ballistics,3,Bind Resistance,2,Dragon Resistance,1,1,1,0,0,0,0
+Punishing Draw,1,Intimidator,3,,0,2,1,0,0,0,0
+Bludgeoner,1,Blast Attack,1,Bind Resistance,3,1,0,0,0,0,0
+Offensive Guard,2,Handicraft,1,Ice Resistance,3,1,1,0,1,0,0
+Opening Shot,2,Earplugs,1,Peak Performance,1,2,0,0,0,0,0
+Load Shells,1,Adrenaline Rush,1,,0,2,0,0,0,0,0
+Critical Element,2,Ambush,2,,0,2,1,0,0,0,0
+Blast Attack,2,Stamina Thief,1,Mind's Eye,1,1,0,0,0,0,0
+Offensive Guard,1,Peak Performance,1,Tool Specialist,2,2,1,0,0,0,0
+Water Attack,2,Power Prolonger,1,Heroics,2,0,0,0,1,0,0
+Charge Master,2,Evade Extender,1,Tool Specialist,2,2,1,0,0,0,0
+Critical Draw,2,Coalescence,1,Counterstrike,1,2,1,0,0,0,0
+Water Attack,2,Special Ammo Boost,1,Adrenaline Rush,1,1,1,0,1,0,0
+Guard,2,Artillery,1,Latent Power,1,1,0,0,0,0,0
+Dragon Attack,1,Partbreaker,1,Recovery Speed,2,1,1,0,0,0,0
+Ballistics,1,Partbreaker,1,Water Resistance,2,2,0,0,0,0,0
+Opening Shot,3,Bleeding Resistance,2,Adaptability,1,1,0,0,0,0,0
+Offensive Guard,1,Fire Resistance,2,Bombardier,2,2,1,0,0,0,0
+Critical Element,1,Resentment,1,Fire Resistance,2,2,0,0,0,0,0
+Critical Status,1,Windproof,3,,0,3,0,0,0,0,0
+Speed Sharpening,1,Free Meal,3,,0,2,0,0,0,0,0
+Poison Attack,1,Sleep Resistance,3,,0,1,1,0,0,0,0
+Paralysis Attack,2,Blight Resistance,1,Mushroomancer,1,2,0,0,0,0,0
+Critical Eye,1,Heroics,2,Ice Resistance,2,3,0,0,0,0,0
+Tetrad Shot,2,Earplugs,2,,0,2,0,0,0,0,0
+Focus,1,Poison Resistance,2,Defense Boost,3,2,1,0,0,0,0
+Critical Draw,1,Windproof,3,,0,2,0,0,0,0,0
+Guard,2,Partbreaker,2,,0,2,1,0,0,0,0
+Handicraft,2,Blast Attack,1,Punishing Draw,1,2,0,0,0,0,0
+Piercing Shots,1,Item Prolonger,3,,0,1,1,0,0,0,0
+Slugger,2,Weakness Exploit,1,,0,1,0,0,0,0,0
+Guard Up,3,Foray,1,,0,1,1,0,1,0,0
+Critical Eye,2,Razor Sharp,1,Convert Element,1,1,0,0,0,0,0
+Special Ammo Boost,1,Dragon Resistance,3,,0,1,1,0,0,0,0
+Opening Shot,1,Evade Extender,1,Thunder Resistance,2,2,0,0,0,0,0
+Horn Maestro,1,Evade Window,3,,0,2,1,0,0,0,0
+Spread/Power Shots,1,Peak Performance,1,Geologist,1,1,0,0,0,0,0
+Ice Attack,2,Earplugs,2,,0,1,0,0,0,0,0
+Fire Attack,1,Windproof,3,,0,3,0,0,0,0,0
+Blast Attack,1,Survival Expert,3,,0,2,1,0,0,0,0
+Paralysis Attack,1,Botanist,4,,0,2,1,0,0,0,0
+Punishing Draw,2,Load Shells,1,Convert Element,1,2,0,0,0,0,0
+Opening Shot,1,Sleep Resistance,2,Fire Resistance,2,2,0,0,0,0,0
+Guard Up,1,Stamina Surge,1,Geologist,2,2,1,0,0,0,0
+Mind's Eye,1,Heroics,2,Item Prolonger,2,1,1,0,0,0,0
+Thunder Attack,2,Critical Element,1,Evade Window,2,2,0,0,0,0,0
+Ice Attack,3,Recovery Up,3,,0,1,0,0,0,0,0
+Power Prolonger,1,Stun Resistance,3,,0,2,0,0,0,0,0
+Protective Polish,1,Tetrad Shot,1,Divine Blessing,3,1,1,0,0,0,0
+Dragon Attack,1,Evade Window,2,Paralysis Resistance,2,1,1,0,0,0,0
+Tetrad Shot,3,Water Resistance,3,,0,1,1,0,1,0,0
+Razor Sharp,1,Intimidator,2,Thunder Resistance,2,2,1,0,0,0,0
+Handicraft,1,Wide-Range,4,,0,2,0,0,0,0,0
+Sleep Attack,1,Maximum Might,1,Iron Skin,2,2,0,0,0,0,0
+Punishing Draw,3,Constitution,4,,0,1,0,0,0,0,0
+Rapid Morph,1,Peak Performance,2,,0,1,1,0,0,0,0
+Razor Sharp,1,Mushroomancer,1,Earplugs,1,2,1,0,0,0,0
+Blast Attack,1,Geologist,3,,0,3,0,0,0,0,0
+Handicraft,1,Antivirus,3,,0,2,0,0,0,0,0
+Tetrad Shot,1,Quick Sheathe,2,Bombardier,2,2,0,0,0,0,0
+Airborne,1,Partbreaker,1,Constitution,3,2,1,0,0,0,0
+Offensive Guard,3,Resentment,1,Divine Blessing,1,0,0,0,1,0,0
+Attack Boost,2,Special Ammo Boost,1,Ballistics,1,0,0,0,1,0,0
+Guard,1,Rapid Morph,1,Weakness Exploit,1,1,1,0,0,0,0
+Razor Sharp,1,Maximum Might,1,Tool Specialist,2,2,1,0,0,0,0
+Charge Master,1,Thunder Resistance,2,Quick Sheathe,2,2,1,0,0,0,0
+Attack Boost,3,Blight Resistance,1,Thunder Resistance,1,2,0,0,0,0,0
+Sleep Attack,1,Horn Maestro,1,Flinch Free,3,2,0,0,0,0,0
+Protective Polish,1,Resentment,2,,0,1,1,0,0,0,0
+Blast Attack,1,Item Prolonger,2,Quick Sheathe,2,1,1,0,0,0,0
+Critical Draw,2,Peak Performance,2,,0,2,0,0,0,0,0
+Guard,1,Thunder Resistance,3,,0,1,1,0,0,0,0
+Punishing Draw,1,Evade Extender,2,,0,3,0,0,0,0,0
+Special Ammo Boost,2,Fire Attack,1,Resentment,1,2,0,0,0,0,0
+Power Prolonger,1,Mushroomancer,1,Recovery Up,2,2,1,0,0,0,0
+Thunder Attack,1,Mushroomancer,2,,0,1,1,0,0,0,0
+Exhaust Functionality,1,Stamina Surge,1,Stun Resistance,2,2,0,0,0,0,0
+Guard Up,3,Weakness Exploit,1,,0,1,1,0,0,0,0
+Exhaust Functionality,1,Resentment,1,Poison Resistance,2,1,1,0,0,0,0
+Opening Shot,1,Botanist,3,Stench Resistance,2,2,0,0,0,0,0
+Punishing Draw,3,Recovery Speed,2,Stench Resistance,1,0,0,0,1,0,0
+Guard,2,Focus,1,Dragon Resistance,3,2,0,0,0,0,0
+Offensive Guard,1,Razor Sharp,1,Recovery Up,3,2,1,0,0,0,0
+Ballistics,1,Stun Resistance,3,,0,2,1,0,0,0,0
+Paralysis Attack,1,Maximum Might,2,,0,1,1,0,0,0,0
+Bludgeoner,2,Slugger,1,Coalescence,1,1,1,0,0,0,0
+Special Ammo Boost,1,Paralysis Resistance,2,Geologist,2,3,0,0,0,0,0
+Mind's Eye,1,Mushroomancer,2,,0,3,0,0,0,0,0
+Critical Status,3,Agitator,1,,0,0,0,0,1,0,0
+Ice Attack,2,Opening Shot,1,Hunger Resistance,3,1,0,0,0,0,0
+Offensive Guard,1,Dragon Resistance,3,,0,2,1,0,0,0,0
+Slugger,2,Weakness Exploit,1,,0,2,0,0,0,0,0
+Blast Attack,1,Evade Window,3,,0,2,0,0,0,0,0
+Rapid Morph,1,Windproof,3,,0,2,1,0,0,0,0
+Guard Up,1,Counterstrike,1,Heroics,2,3,0,0,0,0,0
+Focus,1,Geologist,3,,0,1,1,0,0,0,0
+Blast Attack,1,Constitution,3,Bind Resistance,2,2,0,0,0,0,0
+Protective Polish,2,Critical Status,1,Critical Draw,1,1,0,0,0,0,0
+Charge Up,1,Water Attack,1,Quick Sheathe,3,2,0,0,0,0,0
+Speed Sharpening,1,Defense Boost,3,Quick Sheathe,2,2,0,0,0,0,0
+Charge Master,1,Speed Eating,3,,0,2,1,0,0,0,0
+Guard,1,Intimidator,2,Stun Resistance,2,2,0,0,0,0,0
+Charge Master,3,Evade Window,2,Constitution,2,1,1,0,0,0,0
+Thunder Attack,1,Marathon Runner,2,Wide-Range,3,3,0,0,0,0,0
+Offensive Guard,1,Poison Resistance,3,,0,3,0,0,0,0,0
+Guard Up,1,Heroics,2,Hunger Resistance,2,3,0,0,0,0,0
+Handicraft,1,Counterstrike,2,,0,3,0,0,0,0,0
+Razor Sharp,2,Divine Blessing,2,Aquatic/Oilsilt Mobility,2,2,0,0,0,0,0
+Ballistics,1,Recovery Up,2,Windproof,2,1,1,0,0,0,0
+Mind's Eye,1,Evade Extender,2,,0,2,0,0,0,0,0
+Critical Draw,2,Tool Specialist,3,,0,2,1,0,0,0,0
+Attack Boost,1,Poison Resistance,3,,0,2,1,0,0,0,0
+Protective Polish,2,Dragon Attack,1,Foray,1,2,0,0,0,0,0
+Thunder Attack,3,Recovery Speed,2,Marathon Runner,1,1,0,0,0,0,0
+Poison Attack,1,Hunger Resistance,3,,0,1,1,0,0,0,0
+Offensive Guard,2,Speed Sharpening,1,Marathon Runner,3,1,1,0,0,0,0
+Speed Sharpening,1,Thunder Attack,1,Defense Boost,4,2,0,0,0,0,0
+Stamina Thief,2,Load Shells,1,Item Prolonger,3,2,0,0,0,0,0
+Thunder Attack,1,Tool Specialist,2,Evade Window,2,1,1,0,0,0,0
+Fire Attack,1,Partbreaker,2,,0,1,1,0,0,0,0
+Guard,1,Heroics,2,Stench Resistance,2,2,0,0,0,0,0
+Poison Attack,1,Survival Expert,3,,0,1,1,0,0,0,0
+Sleep Attack,1,Antivirus,2,Constitution,3,3,0,0,0,0,0
+Stamina Thief,1,Evade Window,3,,0,3,0,0,0,0,0
+Razor Sharp,1,Partbreaker,1,Heroics,2,1,1,0,0,0,0
+Critical Status,3,Botanist,3,Recovery Up,1,1,1,0,0,0,0
+Special Ammo Boost,1,Water Resistance,2,Iron Skin,2,3,0,0,0,0,0
+Bludgeoner,1,Stamina Surge,1,Quick Sheathe,2,3,0,0,0,0,0
+Poison Attack,1,Tool Specialist,2,Wide-Range,3,2,0,0,0,0,0
+Water Attack,1,Resentment,1,Bind Resistance,2,1,1,0,0,0,0
+Power Prolonger,1,Counterstrike,1,Stench Resistance,2,2,1,0,0,0,0
+Artillery,1,Weakness Exploit,1,,0,2,1,0,0,0,0
+Tetrad Shot,1,Ice Resistance,2,Fire Resistance,2,2,1,0,0,0,0
+Blast Attack,2,Heroics,2,Earplugs,1,1,1,0,0,0,0
+Guard,1,Tool Specialist,2,Adaptability,2,1,1,0,0,0,0
+Charge Master,1,Evade Extender,1,Survival Expert,2,1,1,0,0,0,0
+Horn Maestro,1,Adrenaline Rush,1,,0,2,0,0,0,0,0
+Offensive Guard,1,Fire Resistance,2,Water Resistance,2,2,1,0,0,0,0
+Focus,1,Free Meal,3,,0,3,0,0,0,0,0
+Guard Up,1,Elemental Absorption,1,,0,1,1,0,0,0,0
+Bludgeoner,1,Bind Resistance,3,,0,3,0,0,0,0,0
+Tetrad Shot,2,Ice Resistance,2,Recovery Up,2,2,1,0,0,0,0
+Sleep Attack,1,Sleep Resistance,2,Adaptability,2,2,0,0,0,0,0
+Rapid Morph,1,Peak Performance,1,Wide-Range,3,2,1,0,0,0,0
+Power Prolonger,2,Blight Resistance,1,Bleeding Resistance,2,2,1,0,0,0,0
+Blast Attack,1,Poison Resistance,2,Aquatic/Oilsilt Mobility,2,2,1,0,0,0,0
+Artillery,3,Defense Boost,4,,0,0,0,0,1,0,0
+Power Prolonger,3,Marathon Runner,3,,0,1,1,0,0,0,0
+Attack Boost,2,Agitator,1,,0,1,1,0,0,0,0
+Poison Duration Up,1,Divine Blessing,2,Aquatic/Oilsilt Mobility,2,1,1,0,0,0,0
+Load Shells,2,Weakness Exploit,1,,0,1,1,0,0,0,0
+Speed Sharpening,1,Evade Window,3,,0,1,1,0,0,0,0
+Charge Master,1,Bleeding Resistance,3,,0,1,1,0,0,0,0
+Razor Sharp,3,Agitator,1,,0,2,0,0,0,0,0
+Bludgeoner,2,Tremor Resistance,2,Bleeding Resistance,2,2,1,0,0,0,0
+Critical Eye,2,Tool Specialist,2,Botanist,3,2,0,0,0,0,0
+Offensive Guard,1,Earplugs,2,,0,2,1,0,0,0,0
+Rapid Morph,1,Evade Extender,1,Blast Resistance,2,2,0,0,0,0,0
+Fire Attack,2,Maximum Might,2,,0,2,0,0,0,0,0
+Ballistics,1,Mushroomancer,2,,0,2,0,0,0,0,0
+Paralysis Attack,2,Punishing Draw,1,Botanist,4,1,0,0,0,0,0
+Power Prolonger,2,Blight Resistance,2,,0,2,1,0,0,0,0
+Guard Up,3,Blight Resistance,1,Tremor Resistance,1,2,0,0,0,0,0
+Critical Element,1,Earplugs,1,Quick Sheathe,2,2,0,0,0,0,0
+Critical Eye,1,Ambush,1,Coalescence,1,2,1,0,0,0,0
+Tetrad Shot,1,Iron Skin,2,Intimidator,2,3,0,0,0,0,0
+Focus,1,Tool Specialist,2,Mushroomancer,1,1,1,0,0,0,0
+Water Attack,2,Thunder Resistance,2,Intimidator,2,2,0,0,0,0,0
+Sleep Attack,1,Critical Status,1,Elemental Absorption,1,2,1,0,0,0,0
+Stamina Thief,1,Mushroomancer,1,Iron Skin,2,2,1,0,0,0,0
+Critical Eye,1,Critical Draw,1,Burst,1,1,1,0,0,0,0
+Master's Touch,1,Elemental Absorption,1,,0,1,1,0,0,0,0
+Guard,1,Sleep Resistance,2,Stench Resistance,2,2,1,0,0,0,0
+Load Shells,2,Tool Specialist,3,,0,2,1,0,0,0,0
+Speed Sharpening,1,Peak Performance,1,Heroics,2,2,0,0,0,0,0
+Sleep Attack,2,Focus,1,Special Ammo Boost,1,2,0,0,0,0,0
+Offensive Guard,1,Coalescence,1,Evade Window,2,1,1,0,0,0,0
+Slugger,1,Mushroomancer,2,,0,2,1,0,0,0,0
+Critical Eye,1,Partbreaker,1,Tremor Resistance,2,2,0,0,0,0,0
+Tetrad Shot,1,Evade Extender,2,,0,2,1,0,0,0,0
+Ice Attack,2,Maximum Might,1,Speed Eating,2,2,0,0,0,0,0
+Ice Attack,1,Blast Resistance,2,Paralysis Resistance,2,3,0,0,0,0,0
+Horn Maestro,2,Adaptability,2,Thunder Resistance,2,2,0,0,0,0,0
+Offensive Guard,2,Earplugs,2,,0,2,0,0,0,0,0
+Speed Sharpening,2,Partbreaker,2,,0,1,0,0,0,0,0
+Speed Sharpening,1,Earplugs,1,Bind Resistance,2,2,0,0,0,0,0
+Tetrad Shot,1,Geologist,2,Poison Resistance,2,2,1,0,0,0,0
+Sleep Attack,1,Bleeding Resistance,3,,0,2,0,0,0,0,0
+Charge Master,1,Ambush,2,,0,3,0,0,0,0,0
+Fire Attack,1,Blast Resistance,3,,0,1,1,0,0,0,0
+Razor Sharp,2,Windproof,2,Constitution,3,1,0,0,0,0,0
+Load Shells,1,Ice Resistance,3,,0,3,0,0,0,0,0
+Thunder Attack,1,Counterstrike,1,Divine Blessing,2,1,1,0,0,0,0
+Blast Functionality,1,Counterstrike,1,Poison Resistance,2,1,0,0,0,0,0
+Razor Sharp,1,Poison Resistance,2,Tremor Resistance,2,1,1,0,0,0,0
+Razor Sharp,2,Stamina Surge,2,,0,2,1,0,0,0,0
+Tetrad Shot,2,Burst,1,,0,1,0,0,0,0,0
+Poison Duration Up,1,Geologist,2,Poison Resistance,2,1,0,0,0,0,0
+Handicraft,1,Convert Element,1,,0,3,0,0,0,0,0
+Horn Maestro,2,Aquatic/Oilsilt Mobility,2,Free Meal,2,1,0,0,0,0,0
+Charge Master,3,Latent Power,1,,0,1,0,0,0,0,0
+Artillery,1,Ice Resistance,3,,0,1,1,0,0,0,0
+Poison Attack,1,Constitution,4,,0,3,0,0,0,0,0
+Poison Attack,1,Water Resistance,3,,0,2,0,0,0,0,0
+Power Prolonger,2,Adrenaline Rush,1,,0,1,1,0,0,0,0
+Ice Attack,2,Rapid Morph,1,Handicraft,1,2,0,0,0,0,0
+Poison Duration Up,1,Coalescence,1,Dragon Resistance,2,1,1,0,0,0,0
+Thunder Attack,3,Elemental Absorption,1,,0,0,0,0,1,0,0
+Water Attack,3,Ambush,1,Fire Resistance,1,0,0,0,1,0,0
+Punishing Draw,1,Resentment,1,Botanist,3,2,0,0,0,0,0
+Razor Sharp,2,Weakness Exploit,1,,0,2,0,0,0,0,0
+Focus,1,Intimidator,3,,0,2,0,0,0,0,0
+Stamina Thief,1,Mushroomancer,1,Tool Specialist,2,1,1,0,0,0,0
+Critical Status,2,Blight Resistance,2,,0,2,0,0,0,0,0
+Charge Up,1,Counterstrike,2,,0,1,1,0,0,0,0
+Speed Sharpening,2,Adrenaline Rush,1,,0,2,0,0,0,0,0
+Poison Attack,1,Maximum Might,1,Ambush,1,3,0,0,0,0,0
+Razor Sharp,2,Offensive Guard,1,Power Prolonger,1,1,0,0,0,0,0
+Paralysis Attack,1,Maximum Might,1,Thunder Resistance,2,2,1,0,0,0,0
+Horn Maestro,1,Peak Performance,2,,0,3,0,0,0,0,0
+Charge Master,1,Quick Sheathe,2,Speed Eating,2,3,0,0,0,0,0
+Speed Sharpening,2,Foray,1,,0,1,0,0,0,0,0
+Slugger,1,Latent Power,1,,0,3,0,0,0,0,0
+Critical Status,1,Stamina Surge,1,Stench Resistance,2,2,1,0,0,0,0
+Poison Attack,2,Fire Resistance,2,Hunger Resistance,2,1,0,0,0,0,0
+Load Shells,2,Divine Blessing,2,Tremor Resistance,2,1,0,0,0,0,0
+Poison Functionality,1,Recovery Up,2,Stun Resistance,2,2,0,0,0,0,0
+Paralysis Attack,1,Heroics,2,Resentment,1,1,1,0,0,0,0
+Guard Up,1,Protective Polish,1,Elemental Absorption,1,2,0,0,0,0,0
+Speed Sharpening,2,Punishing Draw,1,Stamina Surge,1,1,1,0,0,0,0
+Punishing Draw,2,Stamina Surge,1,Evade Window,2,2,1,0,0,0,0
+Handicraft,1,Offensive Guard,1,Survival Expert,3,1,1,0,0,0,0
+Sleep Functionality,1,Recovery Speed,3,,0,1,0,0,1,0,0
+Razor Sharp,1,Maximum Might,1,Windproof,2,2,0,0,0,0,0
+Airborne,1,Counterstrike,2,,0,2,0,0,0,0,0
+Protective Polish,2,Evade Window,2,Resentment,1,2,1,0,0,0,0
+Paralysis Attack,1,Adaptability,2,Aquatic/Oilsilt Mobility,2,3,0,0,0,0,0
+Bludgeoner,3,Flinch Free,3,,0,1,0,0,0,0,0
+Offensive Guard,1,Fire Resistance,2,Bind Resistance,2,2,0,0,0,0,0
+Guard,1,Evade Window,2,Peak Performance,1,2,1,0,0,0,0
+Offensive Guard,3,Blight Resistance,1,Defense Boost,2,2,0,0,0,0,0
+Water Attack,2,Stamina Surge,2,,0,2,1,0,0,0,0
+Offensive Guard,1,Tool Specialist,2,Speed Eating,2,1,1,0,0,0,0
+Blast Attack,1,Peak Performance,2,,0,2,1,0,0,0,0
+Artillery,2,Evade Window,3,,0,1,0,0,0,0,0
+Bludgeoner,1,Critical Draw,1,Agitator,1,2,0,0,0,0,0
+Opening Shot,2,Critical Eye,1,Poison Resistance,3,1,0,0,0,0,0
+Critical Draw,1,Punishing Draw,1,Recovery Up,3,1,0,0,0,0,0
+Protective Polish,1,Paralysis Resistance,2,Stench Resistance,2,1,1,0,0,0,0
+Critical Status,1,Antivirus,2,Intimidator,2,2,0,0,0,0,0
+Tetrad Shot,1,Maximum Might,2,,0,1,1,0,0,0,0
+Guard Up,2,Heroics,2,Partbreaker,1,1,1,0,0,0,0
+Special Ammo Boost,1,Counterstrike,2,,0,2,0,0,0,0,0
+Bludgeoner,1,Punishing Draw,1,Burst,1,2,0,0,0,0,0
+Load Shells,2,Rapid Morph,1,Heroics,2,0,0,0,1,0,0
+Razor Sharp,2,Offensive Guard,1,Antivirus,3,1,0,0,0,0,0
+Dragon Attack,1,Tool Specialist,3,,0,2,0,0,0,0,0
+Water Attack,1,Antivirus,3,,0,2,1,0,0,0,0
+Punishing Draw,2,Partbreaker,1,Counterstrike,1,2,1,0,0,0,0
+Razor Sharp,1,Heroics,3,,0,2,1,0,0,0,0
+Handicraft,1,Peak Performance,2,,0,2,1,0,0,0,0
+Tetrad Shot,2,Evade Extender,1,Bleeding Resistance,2,1,0,0,0,0,0
+Artillery,1,Adaptability,2,Hunger Resistance,2,2,1,0,0,0,0
+Rapid Morph,2,Adrenaline Rush,1,,0,1,1,0,0,0,0
+Special Ammo Boost,1,Wide-Range,4,,0,2,1,0,0,0,0
+Tetrad Shot,1,Tremor Resistance,3,,0,2,0,0,0,0,0
+Opening Shot,3,Iron Skin,2,Aquatic/Oilsilt Mobility,1,0,0,0,1,0,0
+Critical Element,1,Resentment,1,Blast Resistance,2,1,1,0,0,0,0
+Ballistics,3,Foray,1,,0,1,0,0,0,0,0
+Special Ammo Boost,1,Maximum Might,1,Dragon Resistance,2,2,0,0,0,0,0
+Bludgeoner,1,Wide-Range,3,Sleep Resistance,2,1,1,0,0,0,0
+Speed Sharpening,2,Ambush,1,Flinch Free,2,1,0,0,0,0,0
+Sleep Attack,2,Tetrad Shot,1,Agitator,1,1,0,0,0,0,0
+Bludgeoner,3,Botanist,3,Ice Resistance,1,1,1,0,0,0,0
+Special Ammo Boost,2,Earplugs,2,,0,2,1,0,0,0,0
+Ballistics,3,Elemental Absorption,1,,0,1,1,0,1,0,0
+Attack Boost,1,Thunder Resistance,3,,0,2,1,0,0,0,0
+Rapid Fire Up,1,Adrenaline Rush,1,,0,2,0,0,0,0,0
+Ballistics,2,Mushroomancer,1,Stamina Surge,1,2,0,0,0,0,0
+Handicraft,1,Botanist,4,,0,1,1,0,0,0,0
+Mind's Eye,2,Evade Window,2,Quick Sheathe,2,1,0,0,0,0,0
+Attack Boost,1,Elemental Absorption,1,,0,2,0,0,0,0,0
+Load Shells,1,Earplugs,2,,0,2,1,0,0,0,0
+Poison Attack,3,Water Resistance,3,,0,1,1,0,0,0,0
+Thunder Attack,1,Partbreaker,2,,0,1,1,0,0,0,0
+Razor Sharp,2,Partbreaker,1,Mushroomancer,1,1,1,0,0,0,0
+Guard Up,3,Elemental Absorption,1,,0,0,0,0,1,0,0
+Stamina Thief,1,Windproof,3,,0,2,0,0,0,0,0
+Mind's Eye,2,Stamina Surge,1,Counterstrike,1,1,0,0,0,0,0
+Mind's Eye,2,Guard,1,Blight Resistance,1,2,0,0,0,0,0
+Guard,2,Dragon Resistance,2,Item Prolonger,2,1,1,0,0,0,0
+Exhaust Functionality,1,Bind Resistance,2,Wide-Range,3,2,1,0,0,0,0
+Speed Sharpening,2,Water Attack,1,Agitator,1,1,0,0,0,0,0
+Thunder Attack,2,Artillery,1,Elemental Absorption,1,1,1,0,0,0,0
+Focus,2,Critical Element,1,Burst,1,1,1,0,1,0,0
+Charge Master,1,Offensive Guard,1,Fire Resistance,3,1,1,0,0,0,0
+Rapid Morph,1,Heroics,2,Maximum Might,1,2,0,0,0,0,0
+Artillery,1,Ambush,2,,0,3,0,0,0,0,0
+Critical Eye,2,Critical Draw,1,Weakness Exploit,1,1,0,0,0,0,0
+Airborne,1,Counterstrike,2,,0,2,1,0,0,0,0
+Poison Attack,1,Tool Specialist,3,,0,2,0,0,0,0,0
+Attack Boost,1,Convert Element,1,,0,3,0,0,0,0,0
+Load Shells,1,Resentment,1,Iron Skin,2,2,1,0,0,0,0
+Poison Attack,2,Horn Maestro,1,Peak Performance,1,3,0,0,0,0,0
+Offensive Guard,1,Resentment,2,,0,3,0,0,0,0,0
+Power Prolonger,1,Flinch Free,3,,0,2,1,0,0,0,0
+Sleep Functionality,1,Flayer,1,,0,1,1,0,0,0,0
+Power Prolonger,1,Partbreaker,1,Bleeding Resistance,2,3,0,0,0,0,0
+Ice Attack,2,Razor Sharp,1,Fire Resistance,3,0,0,0,1,0,0
+Handicraft,2,Evade Window,3,,0,1,1,0,0,0,0
+Focus,1,Earplugs,1,Paralysis Resistance,2,2,0,0,0,0,0
+Rapid Morph,1,Attack Boost,1,Latent Power,1,2,1,0,0,0,0
+Normal Shots,1,Adrenaline Rush,1,,0,1,0,0,0,0,0
+Ice Attack,1,Antivirus,2,Flinch Free,2,2,0,0,0,0,0
+Protective Polish,3,Weakness Exploit,1,,0,2,0,0,0,0,0
+Charge Master,3,Marathon Runner,3,,0,2,0,0,0,0,0
+Focus,1,Blight Resistance,1,Heroics,2,2,1,0,0,0,0
+Slugger,1,Heroics,3,,0,3,0,0,0,0,0
+Stamina Thief,1,Item Prolonger,2,Bind Resistance,2,1,1,0,0,0,0
+Special Ammo Boost,1,Evade Window,2,Heroics,2,1,1,0,0,0,0
+Ice Attack,1,Tool Specialist,2,Water Resistance,2,1,1,0,0,0,0
+Offensive Guard,3,Windproof,3,,0,1,0,0,0,0,0
+Ballistics,1,Tool Specialist,2,Maximum Might,1,2,0,0,0,0,0
+Tetrad Shot,1,Speed Eating,2,Poison Resistance,2,1,1,0,0,0,0
+Load Shells,1,Tremor Resistance,3,,0,2,1,0,0,0,0
+Ice Attack,1,Peak Performance,2,,0,3,0,0,0,0,0
+Focus,1,Recovery Up,3,,0,1,1,0,0,0,0
+Water Attack,1,Ambush,2,,0,1,1,0,0,0,0
+Handicraft,1,Tremor Resistance,2,Blast Resistance,2,2,0,0,0,0,0
+Guard Up,2,Dragon Attack,1,Evade Extender,1,1,1,0,0,0,0
+Razor Sharp,3,Constitution,3,Bombardier,1,2,0,0,0,0,0
+Rapid Morph,3,Evade Extender,1,Free Meal,1,1,1,0,0,0,0
+Guard,2,Ballistics,1,Bleeding Resistance,3,1,0,0,0,0,0
+Blast Attack,3,Intimidator,3,,0,1,1,0,1,0,0
+Attack Boost,1,Mushroomancer,1,Poison Resistance,2,1,1,0,0,0,0
+Handicraft,1,Ice Attack,1,Survival Expert,3,2,1,0,0,0,0
+Sleep Attack,1,Evade Window,3,,0,2,1,0,0,0,0
+Exhaust Functionality,1,Ambush,1,Aquatic/Oilsilt Mobility,2,1,1,0,0,0,0
+Guard Up,2,Water Resistance,2,Stun Resistance,2,2,1,0,0,0,0
+Punishing Draw,1,Tremor Resistance,2,Bleeding Resistance,2,2,1,0,0,0,0
+Dragon Attack,1,Coalescence,1,Item Prolonger,2,2,0,0,0,0,0
+Mind's Eye,2,Ice Attack,1,Blast Resistance,3,1,1,0,0,0,0
+Blast Attack,1,Evade Extender,1,Tool Specialist,2,3,0,0,0,0,0
+Bludgeoner,1,Bind Resistance,3,,0,3,0,0,0,0,0
+Rapid Morph,1,Sleep Resistance,2,Quick Sheathe,2,2,0,0,0,0,0
+Artillery,2,Evade Window,3,,0,2,1,0,0,0,0
+Speed Sharpening,1,Blight Resistance,2,,0,1,1,0,0,0,0
+Ice Attack,2,Tool Specialist,2,Mushroomancer,1,1,0,0,0,0,0
+Guard,1,Bombardier,3,,0,2,1,0,0,0,0
+Stamina Thief,1,Aquatic/Oilsilt Mobility,2,Bind Resistance,2,2,0,0,0,0,0
+Slugger,2,Evade Window,3,,0,1,1,0,0,0,0
+Fire Attack,1,Blast Resistance,2,Windproof,2,3,0,0,0,0,0
+Blast Attack,1,Coalescence,2,,0,2,1,0,0,0,0
+Slugger,1,Mind's Eye,1,Burst,1,2,1,0,0,0,0
+Poison Attack,3,Latent Power,1,,0,0,0,0,1,0,0
+Para Functionality,1,Heroics,2,Constitution,2,2,0,0,0,0,0
+Punishing Draw,3,Earplugs,1,Bleeding Resistance,1,1,0,0,0,0,0
+Critical Draw,2,Adrenaline Rush,1,,0,2,0,0,0,0,0
+Load Shells,1,Peak Performance,1,Free Meal,2,2,0,0,0,0,0
+Power Prolonger,1,Latent Power,1,,0,1,1,0,0,0,0
+Rapid Morph,2,Heroics,3,,0,2,1,0,0,0,0
+Protective Polish,2,Coalescence,1,Thunder Resistance,2,2,0,0,0,0,0
+Water Attack,1,Latent Power,1,,0,1,1,0,0,0,0
+Stamina Thief,1,Evade Window,3,,0,2,1,0,0,0,0
+Punishing Draw,1,Speed Sharpening,1,Burst,1,2,1,0,0,0,0
+Handicraft,1,Ambush,2,,0,2,1,0,0,0,0
+Handicraft,1,Evade Window,2,Earplugs,1,3,0,0,0,0,0
+Rapid Morph,1,Stamina Thief,1,Thunder Resistance,3,1,0,0,0,0,0
+Poison Attack,2,Coalescence,1,Aquatic/Oilsilt Mobility,2,1,1,0,0,0,0
+Paralysis Attack,1,Evade Extender,2,,0,2,0,0,0,0,0
+Guard,2,Bind Resistance,2,Iron Skin,2,2,0,0,0,0,0
+Paralysis Attack,1,Evade Window,2,Tremor Resistance,2,3,0,0,0,0,0
+Protective Polish,1,Ambush,2,,0,1,1,0,0,0,0
+Special Ammo Boost,1,Survival Expert,3,,0,3,0,0,0,0,0
+Charge Master,1,Speed Eating,2,Iron Skin,2,3,0,0,0,0,0
+Fire Attack,1,Paralysis Resistance,3,,0,1,1,0,0,0,0
+Guard Up,1,Free Meal,2,Stench Resistance,2,2,0,0,0,0,0
+Blast Attack,1,Partbreaker,1,Antivirus,2,1,1,0,0,0,0
+Critical Draw,2,Weakness Exploit,1,,0,1,0,0,0,0,0
+Charge Master,1,Tool Specialist,2,Marathon Runner,2,3,0,0,0,0,0
+Offensive Guard,1,Flayer,1,,0,3,0,0,0,0,0
+Slugger,1,Earplugs,1,Defense Boost,3,1,1,0,0,0,0
+Bludgeoner,1,Stench Resistance,2,Defense Boost,3,2,0,0,0,0,0
+Poison Attack,2,Resentment,1,Water Resistance,2,1,1,0,0,0,0
+Ice Attack,2,Stun Resistance,2,Thunder Resistance,2,1,1,0,0,0,0
+Critical Draw,2,Resentment,1,Ambush,1,1,1,0,0,0,0
+Blast Functionality,1,Adaptability,2,Recovery Speed,2,1,0,0,0,0,0
+Dragon Attack,1,Bind Resistance,3,,0,2,0,0,0,0,0
+Handicraft,3,Earplugs,1,Free Meal,1,2,0,0,0,0,0
+Charge Master,2,Aquatic/Oilsilt Mobility,2,Windproof,2,1,0,0,0,0,0
+Poison Duration Up,1,Ambush,1,Intimidator,2,2,0,0,0,0,0
+Blast Attack,1,Blight Resistance,1,Tool Specialist,2,3,0,0,0,0,0
+Water Attack,2,Burst,1,,0,1,1,0,0,0,0
+Power Prolonger,1,Evade Extender,2,,0,2,0,0,0,0,0
+Blast Attack,3,Mushroomancer,1,Flinch Free,1,2,0,0,0,0,0
+Opening Shot,2,Partbreaker,1,Survival Expert,2,2,0,0,0,0,0
+Tetrad Shot,1,Dragon Attack,1,Free Meal,3,1,0,0,0,0,0
+Ballistics,1,Wide-Range,4,,0,2,0,0,0,0,0
+Bludgeoner,1,Speed Eating,3,,0,1,1,0,0,0,0
+Ballistics,1,Partbreaker,2,,0,2,0,0,0,0,0
+Sleep Attack,1,Thunder Resistance,3,,0,2,1,0,0,0,0
+Guard Up,1,Quick Sheathe,2,Divine Blessing,2,1,1,0,0,0,0
+Rapid Morph,1,Stamina Surge,1,Stench Resistance,2,2,0,0,0,0,0
+Bludgeoner,3,Intimidator,3,,0,1,1,0,0,0,0
+Ice Attack,3,Wide-Range,3,Quick Sheathe,1,1,0,0,0,0,0
+Ballistics,2,Fire Resistance,2,Tremor Resistance,2,1,0,0,0,0,0
+Load Shells,1,Evade Window,3,,0,2,1,0,0,0,0
+Fire Attack,1,Evade Extender,1,Hunger Resistance,2,2,1,0,0,0,0
+Critical Element,1,Elemental Absorption,1,,0,2,0,0,0,0,0
+Critical Eye,1,Geologist,2,Iron Skin,2,2,1,0,0,0,0
+Fire Attack,1,Windproof,2,Wide-Range,3,3,0,0,0,0,0
+Sleep Attack,1,Recovery Up,3,,0,1,1,0,0,0,0
+Rapid Morph,1,Evade Window,3,,0,2,1,0,0,0,0
+Fire Attack,1,Fire Resistance,3,,0,2,1,0,0,0,0
+Guard,2,Handicraft,1,Resentment,1,3,0,0,0,0,0
+Charge Master,1,Blast Resistance,3,,0,2,0,0,0,0,0
+Water Attack,3,Bombardier,3,,0,2,0,0,0,0,0
+Poison Attack,1,Evade Extender,1,Counterstrike,1,2,1,0,0,0,0
+Special Ammo Boost,1,Free Meal,3,,0,2,0,0,0,0,0
+Rapid Morph,1,Water Resistance,3,,0,3,0,0,0,0,0
+Bludgeoner,1,Evade Window,3,,0,2,1,0,0,0,0
+Tetrad Shot,2,Opening Shot,1,Dragon Attack,1,1,0,0,1,0,0
+Blast Attack,1,Tremor Resistance,3,,0,3,0,0,0,0,0
+Paralysis Attack,2,Convert Element,1,,0,1,1,0,0,0,0
+Master's Touch,1,Counterstrike,1,Stench Resistance,1,0,0,0,1,0,0
+Critical Eye,1,Resentment,1,Evade Window,2,2,1,0,0,0,0
+Horn Maestro,2,Ambush,2,,0,2,0,0,0,0,0
+Slugger,2,Water Attack,1,Foray,1,1,1,0,0,0,0
+Bludgeoner,1,Defense Boost,4,,0,2,0,0,0,0,0
+Artillery,2,Maximum Might,1,Earplugs,1,1,1,0,0,0,0
+Rapid Morph,2,Recovery Speed,2,Thunder Resistance,2,2,1,0,0,0,0
+Razor Sharp,3,Ambush,1,Adaptability,1,2,0,0,0,0,0
+Handicraft,2,Partbreaker,2,,0,2,1,0,0,0,0
+Attack Boost,1,Evade Window,2,Ice Resistance,2,1,1,0,0,0,0
+Load Shells,1,Blight Resistance,2,,0,2,0,0,0,0,0
+Punishing Draw,1,Speed Eating,2,Botanist,3,3,0,0,0,0,0
+Ice Attack,3,Iron Skin,3,,0,1,0,0,0,0,0
+Razor Sharp,3,Stamina Surge,1,Thunder Resistance,1,2,0,0,0,0,0
+Guard Up,2,Quick Sheathe,2,Wide-Range,3,2,1,0,0,0,0
+Protective Polish,1,Recovery Up,3,,0,2,0,0,0,0,0
+Mind's Eye,2,Stamina Thief,1,Maximum Might,1,1,1,0,0,0,0
+Water Attack,1,Heroics,2,Stench Resistance,2,3,0,0,0,0,0
+Poison Attack,3,Adaptability,2,Paralysis Resistance,1,1,0,0,0,0,0
+Bludgeoner,1,Tremor Resistance,2,Recovery Speed,2,3,0,0,0,0,0
+Blast Functionality,1,Punishing Draw,1,Bleeding Resistance,3,1,0,0,0,0,0
+Rapid Morph,1,Elemental Absorption,1,,0,3,0,0,0,0,0
+Handicraft,1,Coalescence,1,Fire Resistance,2,2,1,0,0,0,0
+Sleep Attack,1,Earplugs,1,Wide-Range,3,1,1,0,0,0,0
+Poison Attack,2,Agitator,1,,0,1,1,0,0,0,0
+Opening Shot,1,Ballistics,1,Adrenaline Rush,1,1,1,0,0,0,0
+Dragon Attack,2,Agitator,1,,0,2,1,0,0,0,0
+Load Shells,1,Maximum Might,1,Fire Resistance,2,2,0,0,0,0,0
+Special Ammo Boost,1,Survival Expert,2,Bind Resistance,2,2,0,0,0,0,0
+Attack Boost,1,Evade Window,2,Iron Skin,2,2,1,0,0,0,0
+Special Ammo Boost,1,Item Prolonger,3,,0,3,0,0,0,0,0
+Tetrad Shot,1,Mushroomancer,2,,0,3,0,0,0,0,0
+Special Ammo Boost,1,Mushroomancer,1,Speed Eating,2,2,0,0,0,0,0
+Critical Status,1,Resentment,1,Bombardier,2,3,0,0,0,0,0
+Load Shells,1,Evade Window,2,Stamina Surge,1,3,0,0,0,0,0
+Load Shells,1,Evade Window,2,Heroics,2,3,0,0,0,0,0
+Rapid Morph,1,Bleeding Resistance,3,,0,3,0,0,0,0,0
+Opening Shot,1,Earplugs,1,Bind Resistance,2,3,0,0,0,0,0
+Punishing Draw,2,Intimidator,2,Survival Expert,2,1,0,0,0,0,0
+Attack Boost,1,Flinch Free,3,,0,3,0,0,0,0,0
+Mind's Eye,1,Tremor Resistance,3,,0,1,1,0,0,0,0
+Punishing Draw,1,Resentment,2,,0,3,0,0,0,0,0
+Offensive Guard,2,Partbreaker,2,,0,1,0,0,0,0,0
+Critical Eye,1,Iron Skin,3,,0,2,0,0,0,0,0
+Ice Attack,2,Weakness Exploit,1,,0,2,1,0,0,0,0
+Dragon Attack,1,Attack Boost,1,Convert Element,1,1,1,0,0,0,0
+Offensive Guard,1,Defense Boost,4,,0,2,1,0,0,0,0
+Attack Boost,1,Evade Window,2,Speed Eating,2,2,1,0,0,0,0
+Fire Attack,1,Heroics,2,Windproof,2,1,1,0,0,0,0
+Special Ammo Boost,2,Charge Master,1,Recovery Speed,3,0,0,0,1,0,0
+Para Functionality,1,Elemental Absorption,1,,0,2,0,0,0,0,0
+Artillery,3,Blast Resistance,2,Hunger Resistance,1,1,1,0,0,0,0
+Power Prolonger,1,Blight Resistance,2,,0,1,1,0,0,0,0
+Sleep Attack,1,Ice Resistance,3,,0,2,1,0,0,0,0
+Critical Element,1,Mushroomancer,2,,0,1,1,0,0,0,0
+Critical Eye,1,Heroics,2,Evade Extender,1,1,1,0,0,0,0
+Focus,1,Elemental Absorption,1,,0,2,0,0,0,0,0
+Water Attack,1,Resentment,1,Blight Resistance,1,2,1,0,0,0,0
+Ballistics,1,Critical Status,1,Elemental Absorption,1,1,0,0,0,0,0
+Ballistics,2,Weakness Exploit,1,,0,1,1,0,0,0,0
+Water Attack,1,Poison Attack,1,Intimidator,3,2,1,0,0,0,0
+Guard,1,Stamina Surge,1,Intimidator,2,1,1,0,0,0,0
+Blast Attack,1,Windproof,3,,0,3,0,0,0,0,0
+Attack Boost,1,Tool Specialist,3,,0,2,1,0,0,0,0
+Mind's Eye,2,Adrenaline Rush,1,,0,1,0,0,0,0,0
+Punishing Draw,3,Stamina Surge,1,Windproof,1,1,0,0,0,0,0
+Thunder Attack,1,Maximum Might,1,Wide-Range,3,2,0,0,0,0,0
+Ballistics,1,Blight Resistance,1,Fire Resistance,2,3,0,0,0,0,0
+Offensive Guard,2,Guard,1,Thunder Resistance,3,2,0,0,0,0,0
+Sleep Functionality,1,Counterstrike,1,Water Resistance,1,1,0,0,1,0,0
+Opening Shot,1,Bind Resistance,2,Free Meal,2,1,1,0,0,0,0
+Razor Sharp,3,Ice Resistance,2,Recovery Speed,1,1,0,0,0,0,0
+Critical Status,1,Stamina Surge,1,Blight Resistance,1,3,0,0,0,0,0
+Punishing Draw,1,Resentment,1,Bombardier,2,3,0,0,0,0,0
+Focus,2,Aquatic/Oilsilt Mobility,2,Fire Resistance,2,1,0,0,0,0,0
+Attack Boost,2,Heroics,2,Paralysis Resistance,2,2,0,0,0,0,0
+Special Ammo Boost,1,Guard Up,1,Fire Resistance,3,2,1,0,0,0,0
+Critical Eye,2,Artillery,1,Bombardier,3,0,0,0,1,0,0
+Punishing Draw,1,Attack Boost,1,Antivirus,3,1,0,0,0,0,0
+Mind's Eye,1,Item Prolonger,3,,0,3,0,0,0,0,0
+Thunder Attack,2,Stamina Surge,1,Peak Performance,1,2,1,0,0,0,0
+Sleep Attack,1,Power Prolonger,1,Flayer,1,2,0,0,0,0,0
+Speed Sharpening,1,Maximum Might,1,Bleeding Resistance,2,3,0,0,0,0,0
+Focus,1,Convert Element,1,,0,1,1,0,0,0,0
+Poison Attack,1,Water Resistance,2,Intimidator,2,1,1,0,0,0,0
+Charge Master,1,Critical Draw,1,Convert Element,1,2,0,0,0,0,0
+Load Shells,1,Convert Element,1,,0,1,1,0,0,0,0
+Mind's Eye,1,Evade Extender,2,,0,1,1,0,0,0,0
+Ice Attack,2,Handicraft,1,Paralysis Attack,1,2,0,0,0,0,0
+Tetrad Shot,1,Maximum Might,1,Sleep Resistance,2,1,1,0,0,0,0
+Critical Element,1,Tool Specialist,2,Blight Resistance,1,2,0,0,0,0,0
+Charge Master,1,Ambush,1,Dragon Resistance,2,1,1,0,0,0,0
+Stamina Thief,2,Tool Specialist,2,Bind Resistance,2,1,1,0,0,0,0
+Critical Draw,1,Blight Resistance,1,Windproof,2,2,1,0,0,0,0
+Power Prolonger,1,Blast Attack,1,Sleep Resistance,3,1,0,0,0,0,0
+Slugger,1,Quick Sheathe,3,,0,2,0,0,0,0,0
+Handicraft,3,Poison Resistance,2,Recovery Up,1,1,0,0,1,0,0
+Mind's Eye,2,Weakness Exploit,1,,0,2,1,0,0,0,0
+Focus,1,Blight Resistance,1,Recovery Up,2,3,0,0,0,0,0
+Ice Attack,1,Latent Power,1,,0,2,0,0,0,0,0
+Artillery,1,Flayer,1,,0,2,1,0,0,0,0
+Paralysis Attack,1,Partbreaker,1,Marathon Runner,2,2,1,0,0,0,0
+Artillery,1,Maximum Might,1,Dragon Resistance,2,2,1,0,0,0,0
+Slugger,1,Maximum Might,1,Fire Resistance,2,3,0,0,0,0,0
+Speed Sharpening,1,Tool Specialist,3,,0,1,1,0,0,0,0
+Dragon Attack,2,Bludgeoner,1,Stun Resistance,3,0,0,0,1,0,0
+Critical Eye,1,Dragon Attack,1,Divine Blessing,3,1,1,0,0,0,0
+Slugger,1,Dragon Resistance,3,,0,1,1,0,0,0,0
+Guard,1,Tool Specialist,2,Evade Window,2,2,1,0,0,0,0
+Airborne,1,Flinch Free,2,Poison Resistance,2,1,1,0,0,0,0
+Thunder Attack,1,Partbreaker,1,Evade Window,2,3,0,0,0,0,0
+Fire Attack,2,Razor Sharp,1,Earplugs,1,1,1,0,0,0,0
+Critical Status,1,Partbreaker,1,Tool Specialist,2,2,1,0,0,0,0
+Speed Sharpening,2,Agitator,1,,0,2,0,0,0,0,0
+Razor Sharp,3,Coalescence,1,Speed Eating,1,0,0,0,1,0,0
+Paralysis Attack,2,Evade Extender,1,Fire Resistance,2,1,1,0,0,0,0
+Guard Up,1,Tetrad Shot,1,Burst,1,1,1,0,0,0,0
+Critical Eye,1,Botanist,4,,0,2,0,0,0,0,0
+Dragon Attack,1,Free Meal,2,Recovery Up,2,1,1,0,0,0,0
+Artillery,3,Item Prolonger,2,Ice Resistance,1,1,1,0,0,0,0
+Critical Draw,1,Partbreaker,2,,0,3,0,0,0,0,0
+Focus,1,Windproof,3,,0,1,1,0,0,0,0
+Slugger,1,Poison Resistance,2,Recovery Up,2,1,1,0,0,0,0
+Dragon Attack,2,Convert Element,1,,0,2,0,0,0,0,0
+Blast Attack,2,Ambush,1,Earplugs,1,1,0,0,0,0,0
+Ballistics,2,Critical Element,1,Peak Performance,1,1,0,0,1,0,0
+Ballistics,3,Latent Power,1,,0,1,1,0,0,0,0
+Bludgeoner,1,Quick Sheathe,2,Defense Boost,3,1,1,0,0,0,0
+Attack Boost,2,Evade Window,2,Recovery Up,2,2,1,0,0,0,0
+Tetrad Shot,1,Fire Resistance,2,Speed Eating,2,2,1,0,0,0,0
+Master's Touch,1,Bleeding Resistance,2,Poison Resistance,1,0,0,0,1,0,0
+Horn Maestro,1,Quick Sheathe,3,,0,2,1,0,0,0,0
+Special Ammo Boost,1,Mushroomancer,1,Heroics,2,2,1,0,0,0,0
+Focus,1,Partbreaker,1,Coalescence,1,3,0,0,0,0,0
+Stamina Thief,1,Maximum Might,1,Flinch Free,2,1,1,0,0,0,0
+Thunder Attack,1,Sleep Resistance,3,,0,3,0,0,0,0,0
+Razor Sharp,1,Evade Extender,1,Tool Specialist,2,2,0,0,0,0,0
+Blast Attack,1,Ice Resistance,2,Defense Boost,3,3,0,0,0,0,0
+Rapid Morph,2,Weakness Exploit,1,,0,1,1,0,0,0,0
+Critical Element,1,Windproof,2,Constitution,3,1,1,0,0,0,0
+Critical Draw,1,Elemental Absorption,1,,0,1,1,0,0,0,0
+Power Prolonger,1,Stamina Surge,1,Poison Resistance,2,2,1,0,0,0,0
+Fire Attack,2,Evade Extender,1,Botanist,3,2,0,0,0,0,0
+Sleep Attack,1,Evade Window,2,Recovery Up,2,1,1,0,0,0,0
+Critical Draw,1,Stamina Surge,1,Botanist,3,1,1,0,0,0,0
+Exhaust Functionality,1,Agitator,1,,0,2,0,0,0,0,0
+Critical Element,2,Razor Sharp,1,Coalescence,1,2,0,0,0,0,0
+Blast Attack,1,Divine Blessing,3,,0,2,0,0,0,0,0
+Fire Attack,1,Rapid Morph,1,Quick Sheathe,3,2,1,0,0,0,0
+Special Ammo Boost,1,Item Prolonger,3,,0,1,1,0,0,0,0
+Dragon Attack,3,Hunger Resistance,3,,0,2,0,0,0,0,0
+Charge Master,2,Peak Performance,1,Earplugs,1,2,0,0,0,0,0
+Bludgeoner,1,Stamina Thief,1,Botanist,4,1,0,0,0,0,0
+Special Ammo Boost,2,Partbreaker,1,Paralysis Resistance,2,2,1,0,0,0,0
+Speed Sharpening,1,Earplugs,2,,0,3,0,0,0,0,0
+Bludgeoner,2,Resentment,2,,0,2,1,0,0,0,0
+Mind's Eye,2,Critical Eye,1,Evade Extender,1,1,1,0,0,0,0
+Poison Attack,3,Geologist,2,Iron Skin,1,0,0,0,1,0,0
+Bludgeoner,1,Peak Performance,2,,0,3,0,0,0,0,0
+Blast Attack,1,Partbreaker,2,,0,2,0,0,0,0,0
+Poison Attack,1,Ambush,2,,0,1,1,0,0,0,0
+Critical Eye,1,Resentment,2,,0,3,0,0,0,0,0
+Special Ammo Boost,1,Blight Resistance,1,Item Prolonger,2,2,1,0,0,0,0
+Bludgeoner,1,Maximum Might,2,,0,2,1,0,0,0,0
+Artillery,1,Wide-Range,3,Speed Eating,2,2,1,0,0,0,0
+Sleep Attack,1,Flayer,1,,0,2,1,0,0,0,0
+Critical Draw,1,Latent Power,1,,0,3,0,0,0,0,0
+Blast Attack,1,Free Meal,2,Hunger Resistance,2,2,0,0,0,0,0
+Critical Status,1,Ambush,1,Tool Specialist,2,2,0,0,0,0,0
+Slugger,1,Elemental Absorption,1,,0,1,1,0,0,0,0
+Critical Element,1,Protective Polish,1,Burst,1,2,0,0,0,0,0
+Blast Attack,1,Item Prolonger,3,,0,3,0,0,0,0,0
+Critical Eye,1,Bind Resistance,3,,0,1,1,0,0,0,0
+Bludgeoner,1,Sleep Resistance,2,Antivirus,2,1,1,0,0,0,0
+Handicraft,1,Blight Resistance,2,,0,3,0,0,0,0,0
+Speed Sharpening,1,Stamina Thief,1,Weakness Exploit,1,1,1,0,0,0,0
+Rapid Morph,2,Ambush,2,,0,2,1,0,0,0,0
+Ice Attack,2,Blast Attack,1,Focus,1,1,0,0,0,0,0
+Punishing Draw,2,Latent Power,1,,0,1,0,0,0,0,0
+Bludgeoner,1,Quick Sheathe,2,Item Prolonger,2,2,0,0,0,0,0
+Speed Sharpening,2,Maximum Might,1,Thunder Resistance,2,1,1,0,0,0,0
+Guard Up,1,Poison Resistance,2,Bombardier,2,2,0,0,0,0,0
+Ballistics,1,Thunder Resistance,2,Divine Blessing,2,1,1,0,0,0,0
+Offensive Guard,2,Counterstrike,1,Recovery Speed,2,2,0,0,0,0,0
+Tetrad Shot,2,Sleep Attack,1,Wide-Range,4,1,0,0,0,0,0
+Master's Touch,1,Elemental Absorption,1,,0,1,0,0,0,0,0
+Handicraft,2,Foray,1,,0,1,0,0,0,0,0
+Blast Attack,2,Power Prolonger,1,Weakness Exploit,1,2,0,0,0,0,0
+Punishing Draw,3,Sleep Resistance,3,,0,1,1,0,0,0,0
+Charge Up,1,Defense Boost,3,Stench Resistance,2,1,0,0,0,0,0
+Dragon Attack,1,Wide-Range,4,,0,3,0,0,0,0,0
+Critical Draw,1,Peak Performance,2,,0,3,0,0,0,0,0
+Rapid Morph,1,Resentment,1,Evade Window,2,2,0,0,0,0,0
+Sleep Attack,2,Power Prolonger,1,Slugger,1,2,0,0,0,0,0
+Special Ammo Boost,1,Tool Specialist,2,Maximum Might,1,2,0,0,0,0,0
+Stamina Thief,2,Stamina Surge,1,Quick Sheathe,2,2,0,0,0,0,0
+Fire Attack,1,Maximum Might,1,Windproof,2,2,1,0,0,0,0
+Focus,1,Speed Eating,3,,0,2,1,0,0,0,0
+Opening Shot,1,Power Prolonger,1,Weakness Exploit,1,1,0,0,0,0,0
+Poison Attack,1,Peak Performance,2,,0,1,1,0,0,0,0
+Opening Shot,1,Bombardier,2,Defense Boost,3,2,1,0,0,0,0
+Critical Status,1,Survival Expert,2,Bombardier,2,1,1,0,0,0,0
+Poison Attack,1,Punishing Draw,1,Windproof,3,1,0,0,0,0,0
+Special Ammo Boost,1,Stun Resistance,2,Iron Skin,2,2,1,0,0,0,0
+Ballistics,1,Elemental Absorption,1,,0,1,1,0,0,0,0
+Charge Master,1,Blight Resistance,1,Bind Resistance,2,3,0,0,0,0,0
+Razor Sharp,2,Critical Draw,1,Latent Power,1,2,0,0,0,0,0
+Mind's Eye,2,Constitution,3,Free Meal,2,2,1,0,0,0,0
+Handicraft,1,Guard Up,1,Burst,1,1,0,0,0,0,0
+Focus,2,Burst,1,,0,2,1,0,0,0,0
+Para Functionality,1,Speed Eating,2,Windproof,1,1,0,0,0,0,0
+Charge Master,1,Peak Performance,1,Dragon Resistance,2,2,1,0,0,0,0
+Load Shells,1,Blast Resistance,3,,0,1,1,0,0,0,0
+Focus,1,Coalescence,1,Botanist,3,3,0,0,0,0,0
+Stamina Thief,1,Resentment,1,Defense Boost,3,2,1,0,0,0,0
+Special Ammo Boost,2,Thunder Attack,1,Agitator,1,1,0,0,0,0,0
+Paralysis Attack,2,Hunger Resistance,2,Quick Sheathe,2,2,0,0,0,0,0
+Tetrad Shot,1,Peak Performance,2,,0,3,0,0,0,0,0
+Load Shells,1,Evade Window,3,,0,3,0,0,0,0,0
+Poison Duration Up,1,Maximum Might,1,Blight Resistance,1,2,1,0,0,0,0
+Power Prolonger,3,Heroics,2,Stench Resistance,1,2,0,0,0,0,0
+Poison Attack,2,Razor Sharp,1,Defense Boost,4,1,1,0,0,0,0
+Razor Sharp,1,Blast Resistance,3,,0,3,0,0,0,0,0
+Sleep Attack,1,Slugger,1,Foray,1,2,0,0,0,0,0
+Ice Attack,1,Mushroomancer,2,,0,1,1,0,0,0,0
+Blast Attack,2,Evade Extender,1,Paralysis Resistance,2,1,0,0,0,0,0
+Critical Element,1,Adrenaline Rush,1,,0,2,0,0,0,0,0
+Focus,2,Partbreaker,1,Defense Boost,3,1,1,0,0,0,0
+Opening Shot,1,Load Shells,1,Windproof,3,1,0,0,0,0,0
+Critical Draw,2,Partbreaker,1,Dragon Resistance,2,2,0,0,0,0,0
+Dragon Attack,3,Ambush,1,Defense Boost,2,0,0,0,1,0,0
+Critical Element,1,Weakness Exploit,1,,0,2,1,0,0,0,0
+Sleep Attack,1,Antivirus,2,Divine Blessing,2,2,0,0,0,0,0
+Focus,2,Evade Window,2,Heroics,2,1,1,0,0,0,0
+Blast Attack,2,Ambush,1,Blast Resistance,2,2,0,0,0,0,0
+Razor Sharp,2,Latent Power,1,,0,1,0,0,0,0,0
+Ice Attack,3,Weakness Exploit,1,,0,2,0,0,0,0,0
+Tetrad Shot,1,Partbreaker,1,Thunder Resistance,2,2,1,0,0,0,0
+Speed Sharpening,1,Divine Blessing,3,,0,2,1,0,0,0,0
+Charge Master,3,Sleep Resistance,2,Fire Resistance,1,0,0,0,1,0,0
+Horn Maestro,2,Protective Polish,1,Partbreaker,1,1,1,0,0,0,0
+Attack Boost,3,Blast Resistance,2,Iron Skin,1,1,0,0,1,0,0
+Power Prolonger,3,Ice Resistance,2,Fire Resistance,1,2,0,0,0,0,0
+Charge Master,1,Hunger Resistance,3,,0,2,1,0,0,0,0
+Blast Attack,1,Foray,1,,0,2,0,0,0,0,0
+Attack Boost,2,Ice Resistance,2,Marathon Runner,2,2,1,0,0,0,0
+Power Prolonger,1,Evade Window,3,,0,2,0,0,0,0,0
+Ballistics,1,Evade Window,2,Tool Specialist,2,1,1,0,0,0,0
+Critical Draw,1,Mushroomancer,1,Constitution,3,1,1,0,0,0,0
+Ice Attack,1,Flinch Free,3,,0,3,0,0,0,0,0
+Tetrad Shot,3,Ice Resistance,2,Intimidator,1,1,0,0,0,0,0
+Critical Element,1,Water Attack,1,Burst,1,1,0,0,0,0,0
+Bludgeoner,1,Defense Boost,4,,0,2,1,0,0,0,0
+Blast Functionality,1,Mushroomancer,1,Stamina Surge,1,1,0,0,0,0,0
+Attack Boost,2,Handicraft,1,Sleep Resistance,3,1,1,0,0,0,0
+Critical Draw,3,Recovery Speed,2,Sleep Resistance,1,2,0,0,0,0,0
+Offensive Guard,1,Bludgeoner,1,Free Meal,3,1,0,0,0,0,0
+Opening Shot,2,Critical Eye,1,Artillery,1,1,0,0,0,0,0
+Power Prolonger,1,Tremor Resistance,3,,0,2,1,0,0,0,0
+Water Attack,2,Stamina Surge,2,,0,1,0,0,0,0,0
+Charge Master,1,Heroics,2,Blight Resistance,1,3,0,0,0,0,0
+Tetrad Shot,1,Counterstrike,1,Aquatic/Oilsilt Mobility,2,2,1,0,0,0,0
+Stamina Thief,1,Ambush,1,Windproof,2,1,1,0,0,0,0
+Attack Boost,1,Weakness Exploit,1,,0,3,0,0,0,0,0
+Thunder Attack,1,Coalescence,2,,0,2,0,0,0,0,0
+Guard Up,1,Fire Resistance,2,Speed Eating,2,2,1,0,0,0,0
+Ice Attack,1,Tetrad Shot,1,Ice Resistance,3,2,1,0,0,0,0
+Tetrad Shot,1,Maximum Might,2,,0,2,1,0,0,0,0
+Stamina Thief,2,Evade Window,3,,0,2,1,0,0,0,0
+Offensive Guard,1,Evade Window,2,Blight Resistance,1,1,1,0,0,0,0
+Guard Up,1,Tool Specialist,3,,0,1,1,0,0,0,0
+Artillery,1,Free Meal,3,,0,3,0,0,0,0,0
+Guard Up,1,Blight Resistance,1,Bind Resistance,2,2,0,0,0,0,0
+Poison Attack,1,Blight Resistance,1,Fire Resistance,2,2,1,0,0,0,0
+Protective Polish,1,Critical Eye,1,Bombardier,3,2,0,0,0,0,0
+Water Attack,3,Burst,1,,0,1,1,0,0,0,0
+Attack Boost,1,Coalescence,1,Evade Window,2,3,0,0,0,0,0
+Critical Status,2,Constitution,3,Bleeding Resistance,2,1,1,0,0,0,0
+Power Prolonger,2,Dragon Attack,1,Geologist,3,2,0,0,0,0,0
+Ballistics,1,Slugger,1,Sleep Resistance,3,2,0,0,0,0,0
+Handicraft,2,Resentment,1,Earplugs,1,2,1,0,0,0,0
+Critical Draw,2,Peak Performance,2,,0,1,0,0,0,0,0
+Water Attack,1,Dragon Resistance,3,,0,2,1,0,0,0,0
+Punishing Draw,1,Maximum Might,1,Bombardier,2,3,0,0,0,0,0
+Load Shells,2,Ice Attack,1,Tool Specialist,2,3,0,0,0,0,0
+Poison Attack,1,Counterstrike,2,,0,2,1,0,0,0,0
+Paralysis Attack,1,Windproof,2,Antivirus,2,2,0,0,0,0,0
+Special Ammo Boost,1,Paralysis Attack,1,Quick Sheathe,3,2,0,0,0,0,0
+Charge Master,1,Stamina Surge,1,Adaptability,2,1,1,0,0,0,0
+Load Shells,1,Peak Performance,2,,0,3,0,0,0,0,0
+Slugger,1,Special Ammo Boost,1,Flayer,1,1,1,0,0,0,0
+Opening Shot,1,Latent Power,1,,0,2,1,0,0,0,0
+Guard Up,3,Aquatic/Oilsilt Mobility,2,Recovery Speed,1,1,1,0,0,0,0
+Thunder Attack,3,Item Prolonger,3,,0,2,0,0,0,0,0
+Protective Polish,2,Thunder Resistance,2,Stun Resistance,2,2,1,0,0,0,0
+Artillery,1,Evade Extender,2,,0,2,0,0,0,0,0
+Guard Up,2,Convert Element,1,,0,1,1,0,0,0,0
+Mind's Eye,1,Bombardier,3,,0,1,1,0,0,0,0
+Para Functionality,1,Adrenaline Rush,1,,0,1,1,0,0,0,0
+Mind's Eye,2,Guard Up,1,Convert Element,1,1,1,0,0,0,0
+Sleep Attack,2,Mushroomancer,1,Coalescence,1,2,1,0,0,0,0
+Critical Draw,2,Coalescence,1,Partbreaker,1,1,1,0,0,0,0
+Punishing Draw,1,Blast Resistance,2,Botanist,3,3,0,0,0,0,0
+Load Shells,1,Mushroomancer,2,,0,2,1,0,0,0,0
+Offensive Guard,2,Flinch Free,2,Divine Blessing,2,1,0,0,0,0,0
+Stamina Thief,1,Sleep Resistance,2,Adaptability,2,3,0,0,0,0,0
+Critical Status,1,Coalescence,1,Recovery Speed,2,3,0,0,0,0,0
+Critical Eye,1,Blight Resistance,1,Bombardier,2,1,1,0,0,0,0
+Guard Up,1,Partbreaker,1,Coalescence,1,1,1,0,0,0,0
+Thunder Attack,2,Coalescence,1,Peak Performance,1,1,1,0,0,0,0
+Focus,1,Tool Specialist,2,Poison Resistance,2,2,1,0,0,0,0
+Poison Attack,1,Blight Resistance,2,,0,3,0,0,0,0,0
+Razor Sharp,1,Blast Resistance,2,Fire Resistance,2,3,0,0,0,0,0
+Ice Attack,1,Windproof,2,Bombardier,2,2,1,0,0,0,0
+Guard Up,2,Stamina Surge,2,,0,1,0,0,0,0,0
+Power Prolonger,1,Blast Attack,1,Weakness Exploit,1,1,1,0,0,0,0
+Opening Shot,1,Weakness Exploit,1,,0,1,1,0,0,0,0
+Ice Attack,1,Defense Boost,3,Recovery Up,2,1,1,0,0,0,0
+Power Prolonger,1,Dragon Resistance,3,,0,3,0,0,0,0,0
+Razor Sharp,1,Opening Shot,1,Tremor Resistance,3,1,1,0,0,0,0
+Ice Attack,1,Divine Blessing,3,,0,2,0,0,0,0,0
+Guard Up,1,Constitution,4,,0,1,1,0,0,0,0
+Critical Draw,1,Convert Element,1,,0,1,1,0,0,0,0
+Bludgeoner,3,Agitator,1,,0,0,0,0,1,0,0
+Rapid Morph,2,Partbreaker,1,Evade Extender,1,2,1,0,0,0,0
+Dragon Attack,3,Mushroomancer,1,Stench Resistance,1,1,0,0,1,0,0
+Offensive Guard,1,Windproof,3,,0,2,0,0,0,0,0
+Razor Sharp,3,Marathon Runner,2,Poison Resistance,1,1,0,0,1,0,0
+Rapid Fire Up,1,Peak Performance,1,Flinch Free,1,0,0,0,1,0,0
+Sleep Attack,1,Stamina Surge,1,Item Prolonger,2,3,0,0,0,0,0
+Guard Up,2,Adaptability,2,Blast Resistance,2,1,1,0,0,0,0
+Fire Attack,2,Evade Window,3,,0,2,0,0,0,0,0
+Punishing Draw,1,Bleeding Resistance,2,Hunger Resistance,2,3,0,0,0,0,0
+Horn Maestro,2,Mushroomancer,2,,0,2,1,0,0,0,0
+Punishing Draw,3,Ice Resistance,2,Sleep Resistance,1,2,0,0,0,0,0
+Razor Sharp,1,Handicraft,1,Foray,1,1,1,0,0,0,0
+Dragon Attack,1,Stench Resistance,2,Hunger Resistance,2,2,0,0,0,0,0
+Blast Functionality,1,Peak Performance,2,,0,1,1,0,0,0,0
+Opening Shot,1,Counterstrike,2,,0,2,1,0,0,0,0
+Sleep Attack,2,Artillery,1,Elemental Absorption,1,2,0,0,0,0,0
+Blast Attack,1,Counterstrike,1,Intimidator,2,2,1,0,0,0,0
+Artillery,3,Paralysis Resistance,2,Defense Boost,2,0,0,0,1,0,0
+Sleep Attack,2,Heroics,2,Geologist,2,2,0,0,0,0,0
+Charge Up,1,Razor Sharp,1,Stun Resistance,3,0,0,0,1,0,0
+Guard Up,1,Convert Element,1,,0,2,1,0,0,0,0
+Critical Status,1,Mushroomancer,1,Defense Boost,3,2,1,0,0,0,0
+Paralysis Attack,2,Critical Draw,1,Power Prolonger,1,2,0,0,0,0,0
+Handicraft,1,Critical Status,1,Adrenaline Rush,1,1,0,0,0,0,0
+Speed Sharpening,1,Earplugs,2,,0,2,1,0,0,0,0
+Speed Sharpening,2,Dragon Attack,1,Tremor Resistance,3,0,0,0,1,0,0
+Critical Element,1,Ambush,1,Free Meal,2,3,0,0,0,0,0
+Guard,2,Foray,1,,0,1,1,0,0,0,0
+Critical Boost,1,Power Prolonger,1,Protective Polish,1,1,0,0,1,0,0
+Paralysis Attack,2,Stamina Thief,1,Coalescence,1,1,0,0,1,0,0
+Protective Polish,2,Handicraft,1,Resentment,1,1,1,0,0,0,0
+Punishing Draw,2,Slugger,1,Flayer,1,1,1,0,1,0,0
+Focus,2,Maximum Might,2,,0,1,0,0,0,0,0
+Bludgeoner,1,Tool Specialist,2,Stamina Surge,1,2,0,0,0,0,0
+Protective Polish,1,Survival Expert,2,Bombardier,2,1,1,0,0,0,0
+Guard Up,1,Maximum Might,2,,0,1,1,0,0,0,0
+Punishing Draw,2,Sleep Attack,1,Evade Extender,1,2,0,0,0,0,0
+Poison Attack,1,Defense Boost,3,Stun Resistance,2,2,1,0,0,0,0
+Power Prolonger,1,Heroics,2,Hunger Resistance,2,1,1,0,0,0,0
+Mind's Eye,2,Coalescence,1,Marathon Runner,2,1,1,0,0,0,0
+Focus,1,Latent Power,1,,0,2,1,0,0,0,0
+Paralysis Attack,1,Coalescence,1,Adaptability,2,2,0,0,0,0,0
+Opening Shot,1,Adaptability,2,Survival Expert,2,2,0,0,0,0,0
+Paralysis Attack,1,Windproof,2,Fire Resistance,2,1,1,0,0,0,0
+Charge Master,1,Stamina Surge,2,,0,1,1,0,0,0,0
+Handicraft,2,Earplugs,1,Bombardier,2,2,0,0,0,0,0
+Paralysis Attack,1,Wide-Range,4,,0,3,0,0,0,0,0
+Dragon Attack,1,Partbreaker,2,,0,1,1,0,0,0,0
+Ballistics,2,Item Prolonger,2,Poison Resistance,2,1,0,0,0,0,0
+Critical Draw,1,Poison Resistance,3,,0,3,0,0,0,0,0
+Mind's Eye,1,Water Resistance,2,Paralysis Resistance,2,2,1,0,0,0,0
+Sleep Functionality,1,Elemental Absorption,1,,0,1,0,0,1,0,0
+Punishing Draw,1,Stench Resistance,2,Item Prolonger,2,1,1,0,0,0,0
+Guard,1,Razor Sharp,1,Survival Expert,3,1,0,0,0,0,0
+Handicraft,1,Ambush,2,,0,3,0,0,0,0,0
+Poison Duration Up,1,Guard Up,1,Blight Resistance,1,2,0,0,0,0,0
+Blast Attack,1,Item Prolonger,3,,0,2,1,0,0,0,0
+Mind's Eye,1,Botanist,4,,0,3,0,0,0,0,0
+Sleep Attack,1,Maximum Might,2,,0,2,0,0,0,0,0
+Thunder Attack,2,Evade Extender,1,Water Resistance,2,2,0,0,0,0,0
+Ballistics,2,Mushroomancer,1,Free Meal,2,2,1,0,0,0,0
+Blast Attack,1,Evade Extender,1,Heroics,2,2,1,0,0,0,0
+Special Ammo Boost,1,Windproof,3,,0,2,0,0,0,0,0
+Poison Attack,1,Recovery Up,3,,0,2,0,0,0,0,0
+Mind's Eye,2,Evade Extender,2,,0,2,0,0,0,0,0
+Ice Attack,2,Coalescence,2,,0,2,0,0,0,0,0
+Fire Attack,1,Iron Skin,2,Ice Resistance,2,1,1,0,0,0,0
+Tetrad Shot,2,Maximum Might,2,,0,2,0,0,0,0,0
+Speed Sharpening,1,Tool Specialist,3,,0,2,1,0,0,0,0
+Guard,2,Convert Element,1,,0,2,1,0,0,0,0
+Speed Sharpening,1,Evade Window,2,Divine Blessing,2,3,0,0,0,0,0
+Focus,2,Stamina Thief,1,Blight Resistance,1,3,0,0,0,0,0
+Mind's Eye,3,Recovery Up,2,Bind Resistance,1,1,1,0,0,0,0
+Dragon Attack,1,Heroics,2,Earplugs,1,2,1,0,0,0,0
+Critical Draw,1,Weakness Exploit,1,,0,1,1,0,0,0,0
+Power Prolonger,2,Burst,1,,0,2,0,0,0,0,0
+Horn Maestro,1,Earplugs,1,Flinch Free,2,2,1,0,0,0,0
+Attack Boost,2,Protective Polish,1,Bind Resistance,3,0,0,0,1,0,0
+Critical Draw,2,Sleep Resistance,2,Divine Blessing,2,2,1,0,0,0,0
+Ice Attack,1,Evade Extender,1,Item Prolonger,2,2,1,0,0,0,0
+Critical Eye,1,Free Meal,2,Bind Resistance,2,1,1,0,0,0,0
+Punishing Draw,2,Water Attack,1,Evade Window,2,1,0,0,1,0,0
+Speed Sharpening,2,Convert Element,1,,0,1,0,0,0,0,0
+Handicraft,1,Blast Attack,1,Marathon Runner,3,2,1,0,0,0,0
+Thunder Attack,1,Razor Sharp,1,Bombardier,3,2,0,0,0,0,0
+Horn Maestro,1,Power Prolonger,1,Flayer,1,2,0,0,0,0,0
+Power Prolonger,1,Elemental Absorption,1,,0,3,0,0,0,0,0
+Critical Eye,1,Punishing Draw,1,Convert Element,1,2,1,0,0,0,0
+Normal Shots,1,Flayer,1,,0,1,0,0,0,0,0
+Critical Draw,1,Tool Specialist,3,,0,3,0,0,0,0,0
+Bludgeoner,1,Mushroomancer,1,Evade Window,2,2,1,0,0,0,0
+Handicraft,1,Earplugs,2,,0,1,1,0,0,0,0
+Opening Shot,2,Critical Eye,1,Paralysis Resistance,3,1,0,0,1,0,0
+Ballistics,1,Earplugs,2,,0,2,0,0,0,0,0
+Poison Duration Up,1,Handicraft,1,Adrenaline Rush,1,1,1,0,0,0,0
+Protective Polish,1,Sleep Resistance,2,Recovery Speed,2,3,0,0,0,0,0
+Ice Attack,2,Critical Eye,1,Speed Sharpening,1,1,0,0,1,0,0
+Slugger,1,Blast Resistance,3,,0,3,0,0,0,0,0
+Opening Shot,1,Resentment,2,,0,2,1,0,0,0,0
+Power Prolonger,1,Evade Extender,1,Sleep Resistance,2,1,1,0,0,0,0
+Guard Up,1,Latent Power,1,,0,2,0,0,0,0,0
+Attack Boost,1,Paralysis Attack,1,Quick Sheathe,3,1,0,0,0,0,0
+Rapid Morph,3,Partbreaker,1,Fire Resistance,1,2,0,0,0,0,0
+Critical Element,1,Recovery Up,3,,0,3,0,0,0,0,0
+Poison Duration Up,1,Attack Boost,1,Tremor Resistance,3,2,0,0,0,0,0
+Critical Status,1,Heroics,2,Free Meal,2,2,0,0,0,0,0
+Water Attack,1,Tool Specialist,3,,0,3,0,0,0,0,0
+Attack Boost,1,Partbreaker,1,Marathon Runner,2,2,0,0,0,0,0
+Speed Sharpening,1,Stamina Surge,1,Adaptability,2,2,1,0,0,0,0
+Focus,1,Item Prolonger,3,,0,3,0,0,0,0,0
+Stamina Thief,2,Elemental Absorption,1,,0,2,1,0,0,0,0
+Protective Polish,1,Resentment,2,,0,2,1,0,0,0,0
+Protective Polish,1,Counterstrike,2,,0,1,1,0,0,0,0
+Critical Element,1,Evade Extender,1,Free Meal,2,2,1,0,0,0,0
+Critical Status,1,Blight Resistance,2,,0,3,0,0,0,0,0
+Paralysis Attack,3,Bind Resistance,3,,0,1,1,0,0,0,0
+Horn Maestro,1,Ambush,1,Botanist,3,3,0,0,0,0,0
+Stamina Thief,1,Coalescence,2,,0,3,0,0,0,0,0
+Mind's Eye,2,Water Attack,1,Quick Sheathe,3,1,1,0,0,0,0
+Critical Status,3,Convert Element,1,,0,1,1,0,0,0,0
+Thunder Attack,1,Heroics,3,,0,3,0,0,0,0,0
+Protective Polish,1,Burst,1,,0,3,0,0,0,0,0
+Horn Maestro,1,Resentment,1,Thunder Resistance,2,3,0,0,0,0,0
+Handicraft,1,Constitution,3,Divine Blessing,2,3,0,0,0,0,0
+Focus,1,Water Attack,1,Burst,1,1,0,0,0,0,0
+Critical Eye,2,Maximum Might,1,Resentment,1,2,0,0,0,0,0
+Guard Up,2,Poison Attack,1,Rapid Morph,1,1,0,0,0,0,0
+Stamina Thief,1,Heroics,3,,0,2,1,0,0,0,0
+Stamina Thief,1,Bleeding Resistance,3,,0,2,0,0,0,0,0
+Dragon Attack,2,Bludgeoner,1,Critical Draw,1,0,0,0,1,0,0
+Charge Master,1,Counterstrike,1,Partbreaker,1,2,0,0,0,0,0
+Speed Sharpening,1,Dragon Resistance,2,Item Prolonger,2,3,0,0,0,0,0
+Handicraft,2,Defense Boost,3,Botanist,3,1,0,0,0,0,0
+Thunder Attack,2,Special Ammo Boost,1,Counterstrike,1,2,0,0,0,0,0
+Critical Element,1,Elemental Absorption,1,,0,3,0,0,0,0,0
+Slugger,1,Coalescence,1,Constitution,3,3,0,0,0,0,0
+Load Shells,1,Mushroomancer,1,Heroics,2,1,1,0,0,0,0
+Bludgeoner,3,Tool Specialist,2,Recovery Speed,1,1,1,0,0,0,0
+Rapid Morph,1,Load Shells,1,Elemental Absorption,1,2,1,0,0,0,0
+Dragon Attack,3,Peak Performance,1,Divine Blessing,1,1,0,0,0,0,0
+Critical Eye,3,Speed Eating,3,,0,0,0,0,1,0,0
+Critical Eye,2,Load Shells,1,Tetrad Shot,1,2,0,0,0,0,0
+Special Ammo Boost,2,Fire Attack,1,Adrenaline Rush,1,2,0,0,0,0,0
+Horn Maestro,2,Agitator,1,,0,1,0,0,0,0,0
+Attack Boost,1,Counterstrike,1,Adaptability,2,3,0,0,0,0,0
+Fire Attack,1,Offensive Guard,1,Flayer,1,2,1,0,0,0,0
+Handicraft,1,Marathon Runner,3,,0,3,0,0,0,0,0
+Mind's Eye,1,Heroics,2,Resentment,1,2,1,0,0,0,0
+Paralysis Attack,2,Guard Up,1,Bombardier,3,1,0,0,0,0,0
+Critical Eye,2,Intimidator,2,Geologist,2,2,1,0,0,0,0
+Guard Up,1,Earplugs,1,Water Resistance,2,2,1,0,0,0,0
+Focus,1,Water Resistance,2,Stench Resistance,2,2,0,0,0,0,0
+Focus,1,Water Resistance,3,,0,2,0,0,0,0,0
+Critical Eye,2,Punishing Draw,1,Guard,1,1,1,0,0,0,0
+Offensive Guard,1,Blight Resistance,2,,0,2,0,0,0,0,0
+Load Shells,1,Bleeding Resistance,2,Geologist,2,3,0,0,0,0,0
+Blast Attack,2,Weakness Exploit,1,,0,2,1,0,0,0,0
+Speed Sharpening,1,Handicraft,1,Agitator,1,2,1,0,0,0,0
+Critical Element,1,Stun Resistance,3,,0,1,1,0,0,0,0
+Opening Shot,1,Hunger Resistance,3,,0,2,0,0,0,0,0
+Artillery,1,Ambush,2,,0,2,1,0,0,0,0
+Blast Attack,1,Tool Specialist,3,,0,1,1,0,0,0,0
+Mind's Eye,1,Thunder Resistance,3,,0,3,0,0,0,0,0
+Ice Attack,3,Stamina Surge,1,Free Meal,1,1,1,0,0,0,0
+Attack Boost,3,Weakness Exploit,1,,0,2,0,0,0,0,0
+Stamina Thief,3,Weakness Exploit,1,,0,1,0,0,0,0,0
+Guard Up,2,Tetrad Shot,1,Counterstrike,1,2,0,0,0,0,0
+Attack Boost,3,Flayer,1,,0,2,0,0,0,0,0
+Handicraft,3,Geologist,2,Wide-Range,2,1,1,0,0,0,0
+Focus,2,Offensive Guard,1,Quick Sheathe,3,2,0,0,0,0,0
+Bludgeoner,2,Handicraft,1,Heroics,2,0,0,0,1,0,0
+Blast Attack,3,Maximum Might,1,Bombardier,1,1,1,0,0,0,0
+Guard Up,2,Offensive Guard,1,Critical Element,1,1,1,0,0,0,0
+Spread/Power Shots,1,Convert Element,1,,0,1,1,0,0,0,0
+Rapid Morph,3,Item Prolonger,3,,0,1,0,0,0,0,0
+Dragon Attack,2,Attack Boost,1,Ambush,1,1,1,0,0,0,0
+Speed Sharpening,2,Water Attack,1,Stamina Surge,1,3,0,0,0,0,0
+Dragon Attack,3,Windproof,3,,0,2,0,0,0,0,0
+Razor Sharp,3,Botanist,3,Divine Blessing,1,1,1,0,0,0,0
+Mind's Eye,2,Convert Element,1,,0,2,0,0,0,0,0
+Tetrad Shot,2,Dragon Attack,1,Foray,1,1,0,0,0,0,0
+Piercing Shots,1,Counterstrike,1,Thunder Resistance,1,1,1,0,0,0,0
+Critical Element,3,Thunder Resistance,2,Adaptability,1,2,0,0,0,0,0
+Focus,3,Maximum Might,1,Intimidator,1,1,0,0,0,0,0
+Thunder Attack,2,Protective Polish,1,Critical Draw,1,1,1,0,0,0,0
+Ballistics,2,Guard,1,Convert Element,1,1,0,0,0,0,0
+Poison Functionality,1,Critical Element,1,Survival Expert,3,1,0,0,0,0,0
+Guard Up,3,Blight Resistance,1,Thunder Resistance,1,1,0,0,0,0,0
+Protective Polish,1,Stench Resistance,2,Ice Resistance,2,2,0,0,0,0,0
+Fire Attack,2,Quick Sheathe,2,Ice Resistance,2,2,0,0,0,0,0
+Special Ammo Boost,2,Evade Extender,1,Adaptability,2,2,0,0,0,0,0
+Blast Attack,1,Ambush,1,Hunger Resistance,2,2,1,0,0,0,0
+Charge Master,3,Maximum Might,1,Bombardier,1,0,0,0,1,0,0
+Guard,1,Marathon Runner,3,,0,3,0,0,0,0,0
+Speed Sharpening,2,Maximum Might,1,Earplugs,1,2,0,0,0,0,0
+Rapid Morph,3,Flinch Free,3,,0,2,0,0,0,0,0
+Mind's Eye,3,Counterstrike,1,Quick Sheathe,1,1,0,0,0,0,0
+Critical Boost,1,Offensive Guard,1,Bludgeoner,1,1,1,0,1,0,0
+Blast Attack,3,Hunger Resistance,3,,0,1,0,0,1,0,0
+Stamina Thief,2,Guard Up,1,Partbreaker,1,3,0,0,0,0,0
+Bludgeoner,2,Guard,1,Bleeding Resistance,3,1,1,0,0,0,0
+Handicraft,3,Blast Resistance,3,,0,1,0,0,0,0,0
+Piercing Shots,1,Blight Resistance,1,Survival Expert,1,1,0,0,0,0,0
+Thunder Attack,3,Constitution,3,Divine Blessing,1,2,0,0,0,0,0
+Poison Functionality,1,Mind's Eye,1,Elemental Absorption,1,2,0,0,0,0,0
+Offensive Guard,2,Focus,1,Peak Performance,1,3,0,0,0,0,0
+Sleep Attack,3,Windproof,3,,0,2,0,0,0,0,0
+Water Attack,2,Mind's Eye,1,Burst,1,1,0,0,1,0,0
+Critical Element,2,Razor Sharp,1,Resentment,1,2,0,0,0,0,0
+Thunder Attack,1,Wide-Range,4,,0,1,1,0,0,0,0
+Guard,1,Heroics,2,Partbreaker,1,1,1,0,0,0,0
+Critical Boost,1,Rapid Morph,1,Bludgeoner,1,1,0,0,1,0,0
+Paralysis Attack,1,Ambush,2,,0,1,1,0,0,0,0
+Critical Eye,1,Evade Window,2,Heroics,2,2,1,0,0,0,0
+Poison Attack,2,Critical Eye,1,Adrenaline Rush,1,0,0,0,1,0,0
+Critical Eye,1,Heroics,2,Mushroomancer,1,1,1,0,0,0,0
+Critical Eye,2,Load Shells,1,Resentment,1,2,0,0,0,0,0
+Critical Status,1,Peak Performance,1,Partbreaker,1,1,1,0,0,0,0
+Blast Attack,3,Windproof,2,Speed Eating,1,1,1,0,0,0,0
+Attack Boost,2,Paralysis Attack,1,Offensive Guard,1,1,1,0,0,0,0
+Offensive Guard,3,Antivirus,3,,0,1,0,0,0,0,0
+Critical Element,2,Critical Draw,1,Latent Power,1,1,0,0,0,0,0
+Artillery,2,Slugger,1,Adrenaline Rush,1,0,0,0,1,0,0
+Piercing Shots,1,Foray,1,,0,2,0,0,0,0,0
+Critical Boost,1,Horn Maestro,1,Fire Attack,1,2,0,0,0,0,0
+Thunder Attack,2,Power Prolonger,1,Razor Sharp,1,1,0,0,0,0,0
+Artillery,3,Marathon Runner,2,Free Meal,1,2,0,0,0,0,0
+Blast Attack,3,Tremor Resistance,2,Speed Eating,1,2,0,0,0,0,0
+Critical Status,2,Mind's Eye,1,Evade Window,2,2,0,0,0,0,0
+Poison Functionality,1,Poison Attack,1,Weakness Exploit,1,1,0,0,0,0,0
+Stamina Thief,2,Bludgeoner,1,Stamina Surge,1,2,0,0,0,0,0
+Ice Attack,1,Blast Resistance,2,Ice Resistance,2,2,1,0,0,0,0
+Critical Status,3,Wide-Range,3,Free Meal,1,1,1,0,0,0,0
+Stamina Thief,2,Special Ammo Boost,1,Counterstrike,1,3,0,0,0,0,0
+Critical Status,1,Fire Resistance,3,,0,2,1,0,0,0,0
+Ice Attack,2,Tool Specialist,3,,0,1,0,0,0,0,0
+Rapid Morph,2,Blight Resistance,1,Resentment,1,1,0,0,0,0,0
+Special Ammo Boost,2,Opening Shot,1,Burst,1,2,0,0,0,0,0
+Poison Attack,3,Free Meal,2,Iron Skin,1,1,0,0,0,0,0
+Ice Attack,3,Recovery Up,2,Geologist,1,1,1,0,0,0,0
+Blast Attack,3,Speed Eating,2,Recovery Speed,1,2,0,0,0,0,0
+Blast Attack,3,Foray,1,,0,2,0,0,0,0,0
+Poison Attack,2,Opening Shot,1,Flinch Free,3,2,0,0,0,0,0
+Attack Boost,2,Slugger,1,Mushroomancer,1,0,0,0,1,0,0
+Water Attack,3,Agitator,1,,0,1,1,0,0,0,0
+Razor Sharp,1,Partbreaker,1,Bombardier,2,1,1,0,0,0,0
+Rapid Morph,3,Recovery Up,2,Paralysis Resistance,1,1,0,0,0,0,0
+Water Attack,2,Slugger,1,Punishing Draw,1,1,0,0,0,0,0
+Thunder Attack,2,Critical Element,1,Protective Polish,1,0,0,0,1,0,0
+Offensive Guard,3,Water Resistance,3,,0,1,0,0,1,0,0
+Critical Element,2,Tetrad Shot,1,Latent Power,1,2,0,0,0,0,0
+Protective Polish,2,Handicraft,1,Heroics,2,1,0,0,1,0,0
+Handicraft,3,Peak Performance,1,Paralysis Resistance,1,0,0,0,1,0,0
