@@ -6,17 +6,15 @@ local Util = require("talisman_analyser.util")
 
 local Parser = {}
 
-function Parser.parseFile(filePath)
+function Parser.parseFile(file)
     local talismans = {}
-    local file, _ = io.open(filePath, "r")
     if not file then
-        error("File not found: " .. filePath)
+        error("File not found: " .. file)
     end
 
-    for line in file:lines() do
+    for line in file:gmatch("[^\n]+") do
         table.insert(talismans, Parser.parseLine(line))
     end
-    file:close()
 
     return talismans
 end
