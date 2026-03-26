@@ -1,58 +1,7 @@
-local Skill = require("talisman_analyser.skill")
-local Slot = require("talisman_analyser.slot")
 local SlotType = require("talisman_analyser.slot_type")
-local Talisman = require("talisman_analyser.talisman")
 local Util = require("talisman_analyser.util")
 
 local Parser = {}
-
-function Parser.parseFile(file)
-    local talismans = {}
-    if not file then
-        error("File not found: " .. file)
-    end
-
-    for line in file:gmatch("[^\n]+") do
-        table.insert(talismans, Parser.parseLine(line))
-    end
-
-    return talismans
-end
-
-function Parser.parseLine(line)
-    local values = {}
-    for value in line:gmatch("[^,]*") do
-        table.insert(values, value)
-    end
-
-    if #values ~= 12 then
-        error("Invalid number of fields: " .. #values)
-    end
-
-    local skills = {}
-    local slots = {}
-
-    -- Parse skills (first 6 values)
-    for i = 1, 6, 2 do
-        if values[i] ~= "" then
-            table.insert(skills, Skill.new(values[i], tonumber(values[i + 1])))
-        end
-    end
-
-    -- Parse slots (last 6 values)
-    for i = 7, 12 do
-        local rank = tonumber(values[i])
-        if rank ~= 0 then
-            if i < 10 then
-                table.insert(slots, Slot.new(SlotType.ARMOR, rank))
-            else
-                table.insert(slots, Slot.new(SlotType.WEAPON, rank))
-            end
-        end
-    end
-
-    return Talisman.new(skills, slots)
-end
 
 function Parser.findDuplicates(talismans)
     if not talismans or #talismans == 0 then

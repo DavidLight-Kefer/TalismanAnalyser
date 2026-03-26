@@ -1,3 +1,7 @@
+local Skill = require("talisman_analyser.skill")
+local Slot = require("talisman_analyser.slot")
+local SlotType = require("talisman_analyser.slot_type")
+local Talisman = require("talisman_analyser.talisman")
 local Parser = require("talisman_analyser.parser")
 local Util = require("talisman_analyser.util")
 
@@ -35,20 +39,8 @@ local function printObsolete(talismans)
     end
 end
 
-local function analyser(file) -- former main
-    local talismans
-    repeat
-        local status, result = pcall(function()
-            return Parser.parseFile(file)
-        end)
-
-        if status then
-            talismans = result
-        else
-            print(result .. "\n")
-        end
-    until talismans ~= nil
-
+-- former main
+local function analyse(talismans)
     --printAll(talismans)
     print()
     printDuplicates(talismans)
@@ -117,7 +109,7 @@ local function decodeSlots(slots)
     return { a1, a2, a3 }, hasWeapon and 1 or 0
 end
 
-local function run_export()
+local function get_talismans()
     if not initMethods() then
         return
     end
@@ -145,7 +137,7 @@ local function run_export()
     exportState.running = true
     exportState.phase = "exporting"
 
-    local exportString = ""
+    local talismans = {}
 
     for i = 0, count - 1 do
         exportState.index = i + 1
@@ -157,57 +149,52 @@ local function run_export()
                 goto continue
             end
 
-            local skills = {
+            local skillRawValues = {
                 customValues:get_Item(0),
                 customValues:get_Item(1),
                 customValues:get_Item(2)
             }
             local slot = customValues:get_Item(3)
 
-            if countNonZeroSkills(skills) < 2 or not slot or slot < 0 then
+            if countNonZeroSkills(skillRawValues) < 2 or not slot or slot < 0 then
                 goto continue
             end
 
-            local skillNames, skillPts = {}, {}
+            local skills = {}
             for j = 1, 3 do
-                if skills[j] == 0 then
-                    skillNames[j], skillPts[j] = "", 0
-                else
-                    local level = math.floor(skills[j] / 1000)
-                    local enumVal = skills[j] % 1000
+                if skillRawValues[j] ~= 0 then
+                    local skillName = ""
+                    local level = math.floor(skillRawValues[j] / 1000)
+                    local enumVal = skillRawValues[j] % 1000
                     local skillEnum = cachedMethods.getSkillName:call(nil, enumVal)
                     if skillEnum then
-                        local skillName = cachedMethods.getMsgWithLang:call(nil, skillEnum, 1)
-                        skillNames[j] = skillName and tostring(skillName) or "Unknown"
-                    else
-                        skillNames[j] = "Invalid"
+                        skillName = cachedMethods.getMsgWithLang:call(nil, skillEnum, 1)
+                        skillName = skillName and tostring(skillName) or ""
                     end
-                    skillPts[j] = level
+                    if string.len(skillName) ~= 0 then
+                        table.insert(skills, Skill.new(skillName, level))
+                    end
                 end
             end
 
+            local slots = {}
             local armorSlots, weaponSlot = decodeSlots(slot)
-            local a1 = armorSlots[1] or 0
-            local a2 = armorSlots[2] or 0
-            local a3 = armorSlots[3] or 0
+            for _, armorSlot in pairs(armorSlots) do
+                table.insert(slots, Slot.new(SlotType.ARMOR, armorSlot))
+            end
+            if weaponSlot ~= 0 then
+                table.insert(slots, Slot.new(SlotType.WEAPON, weaponSlot))
+            end
 
-            local line = string.format(
-                    "%s,%d,%s,%d,%s,%d,%d,%d,%d,%d,0,0",
-                    skillNames[1], skillPts[1],
-                    skillNames[2], skillPts[2],
-                    skillNames[3], skillPts[3],
-                    a1, a2, a3, weaponSlot
-            )
-
-            exportString = exportString .. line .. "\n"
+            table.insert(talismans, Talisman.new(skills, slots))
             exportState.validCount = exportState.validCount + 1
         end
         :: continue ::
     end
 
-    analyser(exportString)
     exportState.running = false
     exportState.phase = "idle"
+    return talismans
 end
 
 re.on_draw_ui(function()
@@ -217,8 +204,11 @@ re.on_draw_ui(function()
 
     if not exportState.running then
         if imgui.button("Export Talismans") then
-            local success, _ = pcall(run_export)
-            if not success then
+            local success, result = pcall(get_talismans)
+            if success then
+                analyse(result)
+            else
+                print(result)
                 exportState.running = false
                 exportState.phase = "idle"
             end
