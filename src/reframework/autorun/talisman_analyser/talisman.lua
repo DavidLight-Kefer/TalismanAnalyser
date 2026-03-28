@@ -1,3 +1,5 @@
+local Util = require("talisman_analyser.util")
+
 local Talisman = {}
 Talisman.__index = Talisman
 
@@ -8,80 +10,40 @@ function Talisman.new(skills, slots)
     return self
 end
 
-function Talisman:getSkills()
-    return self.skills
-end
-
-function Talisman:getSlots()
-    return self.slots
-end
-
 function Talisman:__eq(other)
-    if not isinstance(other, Talisman) then
+    if not Util.is_instance(other, Talisman) then
         return false
     end
 
-    -- Check if other.skills is a subset of self.skills
-    local other_skills_set = {}
-    for _, skill in ipairs(other.skills) do
-        other_skills_set[tostring(skill)] = skill
-    end
-
-    local self_skills_set = {}
-    for _, skill in ipairs(self.skills) do
-        self_skills_set[tostring(skill)] = skill
-    end
-
-    for key, _ in pairs(other_skills_set) do
-        if not self_skills_set[key] then
-            return false
-        end
-    end
-
-    -- Check if slots are equal
-    if #self.slots ~= #other.slots then
+    if not other.skills or not Util.list_has_equal_items(self.skills, other.skills) then
         return false
     end
-    for i, slot in ipairs(self.slots) do
-        if slot ~= other.slots[i] then
-            return false
-        end
+    if not other.slots or not Util.list_has_equal_items(self.slots, other.slots) then
+        return false
     end
-
     return true
 end
 
 function Talisman:__tostring()
-    local skills_str = "{"
-    for i, skill in ipairs(self.skills) do
-        if i > 1 then
-            skills_str = skills_str .. ", "
+    local skills_string = "{"
+    for index, skill in ipairs(self.skills) do
+        if index > 1 then
+            skills_string = skills_string .. ", "
         end
-        skills_str = skills_str .. tostring(skill)
+        skills_string = skills_string .. tostring(skill)
     end
-    skills_str = skills_str .. "}"
+    skills_string = skills_string .. "}"
 
-    local slots_str = "{"
-    for i, slot in ipairs(self.slots) do
-        if i > 1 then
-            slots_str = slots_str .. ", "
+    local slots_string = "{"
+    for index, slot in ipairs(self.slots) do
+        if index > 1 then
+            slots_string = slots_string .. ", "
         end
-        slots_str = slots_str .. tostring(slot)
+        slots_string = slots_string .. tostring(slot)
     end
-    slots_str = slots_str .. "}"
+    slots_string = slots_string .. "}"
 
-    return "Talisman{skills=" .. skills_str .. ", slots=" .. slots_str .. "}"
-end
-
-function isinstance(obj, class)
-    while obj do
-        if obj == class then
-            return true
-        end
-        obj = getmetatable(obj)
-        obj = obj and obj.__index
-    end
-    return false
+    return "Talisman{skills=" .. skills_string .. ", slots=" .. slots_string .. "}"
 end
 
 return Talisman
