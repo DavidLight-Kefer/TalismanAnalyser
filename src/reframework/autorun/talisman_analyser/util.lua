@@ -9,26 +9,26 @@ function Util.count_map_entries(map)
     return count
 end
 
---- utility function to check if a table contains a specific value
-function Util.table_contains(table, value)
-    for _, v in pairs(table) do
-        if v == value then
+--- utility function to check if object is an instance of class
+function Util.is_instance(object, class)
+    local metatable = getmetatable(object)
+    while metatable do
+        if metatable == class or metatable.__index == class then
             return true
         end
+        metatable = getmetatable(metatable.__index)
     end
     return false
 end
 
---- utility function to check if object is an instance of class
-function Util.is_instance(object, class)
-    while object do
-        if object == class then
-            return true
+--- function to find the index of an unmatched item in other_list that is equal to item, marking it as matched
+local function find_unmatched_index(other_list, matched, item)
+    for index, other_item in ipairs(other_list) do
+        if not matched[index] and item == other_item then
+            return index
         end
-        object = getmetatable(object)
-        object = object and object.__index
     end
-    return false
+    return nil
 end
 
 --- utility function to check if two lists have equal items
@@ -37,15 +37,13 @@ function Util.list_has_equal_items(list, other_list)
         return false
     end
 
+    local matched = {}
     for _, item in ipairs(list) do
-        if not Util.table_contains(other_list, item) then
+        local index = find_unmatched_index(other_list, matched, item)
+        if not index then
             return false
         end
-    end
-    for _, item in ipairs(other_list) do
-        if not Util.table_contains(list, item) then
-            return false
-        end
+        matched[index] = true
     end
     return true
 end

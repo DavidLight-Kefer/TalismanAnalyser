@@ -3,8 +3,12 @@ local Util = require("talisman_analyser.util")
 local Talisman = {}
 Talisman.__index = Talisman
 
+local _next_id = 0
+
 function Talisman.new(skills, slots)
     local self = setmetatable({}, Talisman)
+    self.id = _next_id
+    _next_id = _next_id + 1
     self.skills = skills or {}
     self.slots = slots or {}
     return self
@@ -25,25 +29,15 @@ function Talisman:__eq(other)
 end
 
 function Talisman:__tostring()
-    local skills_string = "{"
+    local skill_parts = {}
     for index, skill in ipairs(self.skills) do
-        if index > 1 then
-            skills_string = skills_string .. ", "
-        end
-        skills_string = skills_string .. tostring(skill)
+        skill_parts[index] = tostring(skill)
     end
-    skills_string = skills_string .. "}"
-
-    local slots_string = "{"
+    local slot_parts = {}
     for index, slot in ipairs(self.slots) do
-        if index > 1 then
-            slots_string = slots_string .. ", "
-        end
-        slots_string = slots_string .. tostring(slot)
+        slot_parts[index] = tostring(slot)
     end
-    slots_string = slots_string .. "}"
-
-    return "Talisman{skills=" .. skills_string .. ", slots=" .. slots_string .. "}"
+    return "Talisman{skills={" .. table.concat(skill_parts, ", ") .. "}, slots={" .. table.concat(slot_parts, ", ") .. "}}"
 end
 
 return Talisman

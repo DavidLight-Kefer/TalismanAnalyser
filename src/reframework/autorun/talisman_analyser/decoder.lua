@@ -56,26 +56,25 @@ end
 
 function Decoder.get_talismans()
     if not init_methods() then
-        return
+        return {}
     end
     local manager = sdk.get_managed_singleton("app.SaveDataManager")
     if not manager then
-        return
+        return {}
     end
     local save_data = manager:getCurrentUserSaveData()
     if not save_data or not save_data._Equip then
-        return
+        return {}
     end
     local box = save_data._Equip._EquipBox
     if not box then
-        return
+        return {}
     end
 
     local total_count = box:get_Count()
     local count = math.min(total_count, 2400)
-    local talismans = {}
+    local talisman_map = {}
     for i = 0, count - 1 do
-
         local work = box:get_Item(i)
         if work and work:get_Category() == 2 then
             local custom_values = work.BowgunCustomizeId
@@ -121,12 +120,20 @@ function Decoder.get_talismans()
                 table.insert(slots, Slot.new(SlotType.WEAPON, weapon_slot))
             end
 
-            table.insert(talismans, Talisman.new(skills, slots))
+            local talisman = Talisman.new(skills, slots)
+            -- talisman_map is a skill-based grouping of all talismans to allow quick lookup of talismans by their skills
+            for _, skill in ipairs(skills) do
+                if not talisman_map[skill.name] then
+                    talisman_map[skill.name] = {}
+                end
+                table.insert(talisman_map[skill.name], talisman)
+            end
+
+            :: continue ::
         end
-        :: continue ::
     end
 
-    return talismans
+    return talisman_map
 end
 
 return Decoder

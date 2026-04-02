@@ -2,6 +2,7 @@ local SlotType = require("talisman_analyser.slot_type")
 local Util = require("talisman_analyser.util")
 
 local Analyser = {}
+local skill_map_cache = {}
 
 --- function to get the ranks of a talisman's slots of a specific type sorted
 local function get_ranks_sorted(talisman, slot_type)
@@ -38,31 +39,36 @@ end
 local function has_better_slots(talisman, other_talisman)
     local weapon_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.WEAPON), get_ranks_sorted(other_talisman, SlotType.WEAPON))
     local armor_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.ARMOR), get_ranks_sorted(other_talisman, SlotType.ARMOR))
-
     if weapon_comparison >= 0 and armor_comparison >= 0 then
         return weapon_comparison > 0 or armor_comparison > 0
     end
     return false
 end
 
---- function to convert a skill list into a mapping of name to level
-local function to_skill_map(skills)
-    local skill_map = {}
-    for _, skill in ipairs(skills) do
-        local name = skill.name
-        if not skill_map[name] then
-            skill_map[name] = skill.level
-        else
-            skill_map[name] = skill_map[name] + skill.level
-        end
+--- function to lazily compute and cache a skill map
+local function get_skill_map(talisman)
+    local cached = skill_map_cache[talisman.id]
+    if cached then
+        return cached
     end
+
+    local skill_map = {}
+    for _, skill in ipairs(talisman.skills) do
+        local name = skill.name
+        skill_map[name] = (skill_map[name] or 0) + skill.level
+    end
+    skill_map_cache[talisman.id] = skill_map
     return skill_map
 end
 
 --- function to determine if talisman makes other_talisman obsolete
-local function makes_obsolete(talisman, other_talisman)
-    local skills = to_skill_map(talisman.skills)
-    local other_skills = to_skill_map(other_talisman.skills)
+local function makes_obsolete(talisman, other_talisman, cache)
+    if cache[other_talisman] then
+        return false
+    end
+
+    local skills = get_skill_map(talisman)
+    local other_skills = get_skill_map(other_talisman)
     local has_skill_improvement = false
     for name, other_level in pairs(other_skills) do
         local level = skills[name]
@@ -73,30 +79,38 @@ local function makes_obsolete(talisman, other_talisman)
             has_skill_improvement = true
         end
     end
-    if has_skill_improvement or Util.count_map_entries(skills) > Util.count_map_entries(other_skills) then
+    if has_skill_improvement or Util.count_map_entries(skills) > Util.count_map_entries(other_skills) or has_better_slots(talisman, other_talisman) then
+        cache[other_talisman] = true
         return true
     end
-    -- Skills are exactly equal, break the tie with Slots
-    return has_better_slots(talisman, other_talisman)
+    return false
 end
 
 --- function to identify obsolete talismans, returning a map of talisman to a list of talismans it obsoletes
-function Analyser.find_obsolete_talismans(talismans)
-    if not talismans or #talismans == 0 then
+function Analyser.find_obsoletes(talismans, cache, compared)
+    if not talismans or #talismans < 2 then
         return {}
     end
 
+    cache = cache or {}
+    compared = compared or {}
     local obsolete_mapping = {}
-    for i = 1, #talismans do
-        local talisman = talismans[i]
-        for j = 1, #talismans do
-            if i ~= j then
-                local other_talisman = talismans[j]
-                if makes_obsolete(talisman, other_talisman) then
-                    if not obsolete_mapping[talisman] then
-                        obsolete_mapping[talisman] = {}
-                    end
-                    table.insert(obsolete_mapping[talisman], other_talisman)
+    for i = 1, #talismans - 1 do
+        local talisman1 = talismans[i]
+        local talisman_comparison = compared[talisman1.id]
+        for j = i + 1, #talismans do
+            local talisman2 = talismans[j]
+            if not (talisman_comparison and talisman_comparison[talisman2.id]) then
+                if not compared[talisman1.id] then
+                    compared[talisman1.id] = {}
+                end
+                compared[talisman1.id][talisman2.id] = true
+                if makes_obsolete(talisman1, talisman2, cache) then
+                    obsolete_mapping[talisman1] = obsolete_mapping[talisman1] or {}
+                    table.insert(obsolete_mapping[talisman1], talisman2)
+                elseif makes_obsolete(talisman2, talisman1, cache) then
+                    obsolete_mapping[talisman2] = obsolete_mapping[talisman2] or {}
+                    table.insert(obsolete_mapping[talisman2], talisman1)
                 end
             end
         end
@@ -104,21 +118,42 @@ function Analyser.find_obsolete_talismans(talismans)
     return obsolete_mapping
 end
 
+--- function to identify and return obsolete talismans within a hashmap
+function Analyser.find_obsoletes_within_hashmap(talisman_map)
+    local cache = {}
+    local compared = {}
+    local all_obsoletes = {}
+    local seen_worse = {}
+    for _, talisman_list in pairs(talisman_map) do
+        local group_obsoletes = Analyser.find_obsoletes(talisman_list, cache, compared)
+        for talisman, obsoletes_list in pairs(group_obsoletes) do
+            all_obsoletes[talisman] = all_obsoletes[talisman] or {}
+            for _, obsolete in ipairs(obsoletes_list) do
+                if not seen_worse[obsolete] then
+                    seen_worse[obsolete] = true
+                    table.insert(all_obsoletes[talisman], obsolete)
+                end
+            end
+        end
+    end
+    return all_obsoletes
+end
+
 --- function to identify and return duplicate talismans
 function Analyser.find_duplicates(talismans)
-    if not talismans or #talismans == 0 then
+    if not talismans or #talismans < 2 then
         return {}
     end
 
     local duplicates = {}
     local already_counted = {}
     for i, talisman in ipairs(talismans) do
-        if not Util.table_contains(already_counted, i) then
+        if not already_counted[i] then
             local count = 1
             for j = i + 1, #talismans do
                 if talisman == talismans[j] then
                     count = count + 1
-                    table.insert(already_counted, j)
+                    already_counted[j] = true
                 end
             end
             if count > 1 then
@@ -127,6 +162,22 @@ function Analyser.find_duplicates(talismans)
         end
     end
     return duplicates
+end
+
+--- function to identify and return duplicate talismans within a hashmap
+function Analyser.find_duplicates_within_hashmap(talisman_map)
+    local all_duplicates = {}
+    local seen = {}
+    for _, talismans in pairs(talisman_map) do
+        local duplicates = Analyser.find_duplicates(talismans)
+        for talisman, count in pairs(duplicates) do
+            if not seen[talisman] then
+                seen[talisman] = true
+                all_duplicates[talisman] = count
+            end
+        end
+    end
+    return all_duplicates
 end
 
 return Analyser
