@@ -18,7 +18,7 @@ function Skill:__eq(other)
 end
 
 function Skill:__tostring()
-    return "Skill{name='" .. self.name .. "', level=" .. self.level .. "}"
+    return self.name .. " Lv" .. self.level
 end
 
 return Skill

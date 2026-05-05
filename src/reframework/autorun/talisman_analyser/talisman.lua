@@ -37,7 +37,7 @@ function Talisman:__tostring()
     for index, slot in ipairs(self.slots) do
         slot_parts[index] = tostring(slot)
     end
-    return "Talisman{skills={" .. table.concat(skill_parts, ", ") .. "}, slots={" .. table.concat(slot_parts, ", ") .. "}}"
+    return "Skills = { " .. table.concat(skill_parts, ", ") .. " }, Slots = { " .. table.concat(slot_parts, ", ") .. " }"
 end
 
 return Talisman

@@ -18,7 +18,7 @@ function Slot:__eq(other)
 end
 
 function Slot:__tostring()
-    return "Slot{type=" .. self.type .. ", rank=" .. self.rank .. "}"
+    return self.type .. " " .. self.rank
 end
 
 return Slot
