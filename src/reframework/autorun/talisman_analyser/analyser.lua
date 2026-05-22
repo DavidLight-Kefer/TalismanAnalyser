@@ -1,4 +1,4 @@
-local SlotType = require("talisman_analyser.slot_type")
+local SlotType = require("talisman_analyser.slot").Type
 local Util = require("talisman_analyser.util")
 
 local Analyser = {}

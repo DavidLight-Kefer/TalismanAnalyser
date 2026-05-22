@@ -21,4 +21,12 @@ function Slot:__tostring()
     return self.type .. " " .. self.rank
 end
 
-return Slot
+local Type = {
+    ARMOR = "ARMOR",
+    WEAPON = "WEAPON"
+}
+
+return {
+    Slot = Slot,
+    Type = Type
+}
