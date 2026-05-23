@@ -6,6 +6,7 @@ local talismans_data
 local cached_all_output
 local cached_duplicate_output
 local cached_obsolete_output
+local force_slot_comparison = true
 
 local window_states = {
     all_talismans = false,
@@ -48,7 +49,7 @@ end
 
 --- function to generate output for obsolete talismans
 local function generate_obsolete_output(talismans)
-    local obsolete_mapping = Analyser.find_obsoletes_within_hashmap(talismans)
+    local obsolete_mapping = Analyser.find_obsoletes_within_hashmap(talismans, force_slot_comparison)
     local amount = 0
     local result = {}
     for _, talisman_list in pairs(obsolete_mapping) do
@@ -146,6 +147,17 @@ re.on_frame(function()
             if not cached_obsolete_output then
                 cached_obsolete_output = generate_obsolete_output(talismans_data)
             end
+            local changed, value = imgui.checkbox("Always compare Slots", force_slot_comparison)
+            if changed then
+                force_slot_comparison = value
+                cached_obsolete_output = generate_obsolete_output(talismans_data)
+            end
+            imgui.same_line()
+            imgui.text("(?)")
+            if imgui.is_item_hovered() then
+                imgui.set_tooltip("If enabled Slots must always be better or equal, otherwise Slots are only compared when Skills are equal")
+            end
+            imgui.spacing()
             imgui.text(cached_obsolete_output[1])
             imgui.spacing()
             for i = 2, #cached_obsolete_output do

@@ -35,14 +35,17 @@ local function compare_slot_ranks(talisman_ranks, other_talisman_ranks)
     return has_improvement and 1 or 0
 end
 
---- function to determine if talisman has better slots than other_talisman
-local function has_better_slots(talisman, other_talisman)
+--- function to determine if talisman has better slots than other_talisman; -1 -> worse, 0 -> equal, 1 -> better
+local function compare_slots(talisman, other_talisman)
     local weapon_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.WEAPON), get_ranks_sorted(other_talisman, SlotType.WEAPON))
     local armor_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.ARMOR), get_ranks_sorted(other_talisman, SlotType.ARMOR))
-    if weapon_comparison >= 0 and armor_comparison >= 0 then
-        return weapon_comparison > 0 or armor_comparison > 0
+    if weapon_comparison == -1 or armor_comparison == -1 then
+        return -1
+    elseif weapon_comparison == 1 or armor_comparison == 1 then
+        return 1
+    else
+        return 0
     end
-    return false
 end
 
 --- function to lazily compute and cache a skill map
@@ -62,7 +65,7 @@ local function get_skill_map(talisman)
 end
 
 --- function to determine if talisman makes other_talisman obsolete
-local function makes_obsolete(talisman, other_talisman, cache)
+local function makes_obsolete(talisman, other_talisman, cache, force_slot_comparison)
     if cache[other_talisman] then
         return false
     end
@@ -79,15 +82,24 @@ local function makes_obsolete(talisman, other_talisman, cache)
             has_skill_improvement = true
         end
     end
-    if has_skill_improvement or Util.count_map_entries(skills) > Util.count_map_entries(other_skills) or has_better_slots(talisman, other_talisman) then
-        cache[other_talisman] = true
-        return true
+
+    if force_slot_comparison then
+        local slot_comparison = compare_slots(talisman, other_talisman)
+        if slot_comparison == 1 or (slot_comparison == 0 and (has_skill_improvement or Util.count_map_entries(skills) > Util.count_map_entries(other_skills))) then
+            cache[other_talisman] = true
+            return true
+        end
+    else
+        if has_skill_improvement or Util.count_map_entries(skills) > Util.count_map_entries(other_skills) or compare_slots(talisman, other_talisman) == 1 then
+            cache[other_talisman] = true
+            return true
+        end
     end
     return false
 end
 
 --- function to identify obsolete talismans, returning a map of talisman to a list of talismans it obsoletes
-function Analyser.find_obsoletes(talismans, cache, compared)
+function Analyser.find_obsoletes(talismans, cache, compared, force_slot_comparison)
     if not talismans or #talismans < 2 then
         return {}
     end
@@ -105,10 +117,10 @@ function Analyser.find_obsoletes(talismans, cache, compared)
                     compared[talisman1.id] = {}
                 end
                 compared[talisman1.id][talisman2.id] = true
-                if makes_obsolete(talisman1, talisman2, cache) then
+                if makes_obsolete(talisman1, talisman2, cache, force_slot_comparison) then
                     obsolete_mapping[talisman1] = obsolete_mapping[talisman1] or {}
                     table.insert(obsolete_mapping[talisman1], talisman2)
-                elseif makes_obsolete(talisman2, talisman1, cache) then
+                elseif makes_obsolete(talisman2, talisman1, cache, force_slot_comparison) then
                     obsolete_mapping[talisman2] = obsolete_mapping[talisman2] or {}
                     table.insert(obsolete_mapping[talisman2], talisman1)
                 end
@@ -119,13 +131,13 @@ function Analyser.find_obsoletes(talismans, cache, compared)
 end
 
 --- function to identify and return obsolete talismans within a hashmap
-function Analyser.find_obsoletes_within_hashmap(talisman_map)
+function Analyser.find_obsoletes_within_hashmap(talisman_map, force_slot_comparison)
     local cache = {}
     local compared = {}
     local all_obsoletes = {}
     local seen_worse = {}
     for _, talisman_list in pairs(talisman_map) do
-        local group_obsoletes = Analyser.find_obsoletes(talisman_list, cache, compared)
+        local group_obsoletes = Analyser.find_obsoletes(talisman_list, cache, compared, force_slot_comparison)
         for talisman, obsoletes_list in pairs(group_obsoletes) do
             all_obsoletes[talisman] = all_obsoletes[talisman] or {}
             for _, obsolete in ipairs(obsoletes_list) do
