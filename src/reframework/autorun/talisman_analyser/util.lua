@@ -48,4 +48,14 @@ function Util.list_has_equal_items(list, other_list)
     return true
 end
 
+--- utility function to check if a table contains a specific value
+function Util.table_contains(table, value)
+    for _, v in pairs(table) do
+        if v == value then
+            return true
+        end
+    end
+    return false
+end
+
 return Util

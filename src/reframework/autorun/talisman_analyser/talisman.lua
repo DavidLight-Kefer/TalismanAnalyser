@@ -1,4 +1,5 @@
 local Util = require("talisman_analyser.util")
+local SkillsIncompatibility = require("talisman_analyser.skills_incompatibility")
 
 local Talisman = {}
 Talisman.__index = Talisman
@@ -38,6 +39,19 @@ function Talisman:__tostring()
         slot_parts[index] = tostring(slot)
     end
     return "Skills = { " .. table.concat(skill_parts, ", ") .. " }, Slots = { " .. table.concat(slot_parts, ", ") .. " }"
+end
+
+function Talisman:has_skill_contradiction()
+    for i, skill in ipairs(self.skills) do
+        if SkillsIncompatibility[skill.name] then
+            for j = i + 1, #self.skills do
+                if Util.table_contains(SkillsIncompatibility[skill.name], self.skills[j].name) then
+                    return true
+                end
+            end
+        end
+    end
+    return false
 end
 
 return Talisman

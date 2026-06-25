@@ -192,4 +192,31 @@ function Analyser.find_duplicates_within_hashmap(talisman_map)
     return all_duplicates
 end
 
+--- function to identify and return contradicting talismans
+function Analyser.find_contradictions(talismans)
+    local contradictions = {}
+    for _, talisman in ipairs(talismans) do
+        if talisman:has_skill_contradiction() then
+            table.insert(contradictions, talisman)
+        end
+    end
+    return contradictions
+end
+
+--- function to identify and return talismans with contradictions within a hashmap
+function Analyser.find_contradictions_within_hashmap(talisman_map)
+    local all_contradictions = {}
+    local seen = {}
+    for _, talismans in pairs(talisman_map) do
+        local contradictions = Analyser.find_contradictions(talismans)
+        for _, talisman in ipairs(contradictions) do
+            if not seen[talisman] then
+                seen[talisman] = true
+                table.insert(all_contradictions, talisman)
+            end
+        end
+    end
+    return all_contradictions
+end
+
 return Analyser

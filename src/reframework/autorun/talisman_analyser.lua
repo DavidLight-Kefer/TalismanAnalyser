@@ -7,6 +7,7 @@ local cached_all_output
 local cached_duplicate_output
 local cached_obsolete_output
 local force_slot_comparison = true
+local cached_contradiction_output
 
 local window_states = {
     all_talismans = false,
@@ -66,6 +67,17 @@ local function generate_obsolete_output(talismans)
     return result
 end
 
+--- function to generate output for contradicting talismans
+local function generate_contradiction_output(talismans)
+    local result = {}
+    local contradictions = Analyser.find_contradictions_within_hashmap(talismans)
+    table.insert(result, "These " .. #contradictions .. " talismans are contradicting:")
+    for _, talisman in ipairs(contradictions) do
+        table.insert(result, tostring(talisman))
+    end
+    return result
+end
+
 --- function to add a "Script Generated UI" for this mod
 re.on_draw_ui(function()
     if not imgui.tree_node("Talisman Analyser") then
@@ -81,6 +93,7 @@ re.on_draw_ui(function()
             cached_all_output = nil
             cached_duplicate_output = nil
             cached_obsolete_output = nil
+            cached_contradiction_output = nil
         else
             imgui.text_colored(result, 0xFF0000FF) -- error message in RGBA red
         end
@@ -96,6 +109,9 @@ re.on_draw_ui(function()
     end
     if imgui.button("Show Obsolete Talismans") then
         window_states.obsolete_talismans = true
+    end
+    if imgui.button("Show Contradicting Talismans") then
+        window_states.contradicting_talismans = true
     end
     if not talismans_data then
         imgui.end_disabled()
@@ -168,6 +184,19 @@ re.on_frame(function()
                     imgui.tree_pop()
                 end
                 imgui.spacing()
+            end
+            imgui.end_window()
+        end
+        -- Contradicting Talismans Window
+        if window_states.contradicting_talismans then
+            window_states.contradicting_talismans = imgui.begin_window("Contradicting Talismans", true, nil)
+            if not cached_contradiction_output then
+                cached_contradiction_output = generate_contradiction_output(talismans_data)
+            end
+            imgui.text(cached_contradiction_output[1])
+            imgui.spacing()
+            for i = 2, #cached_contradiction_output do
+                imgui.text(cached_contradiction_output[i])
             end
             imgui.end_window()
         end
