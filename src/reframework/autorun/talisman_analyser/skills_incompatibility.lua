@@ -1,8 +1,9 @@
 local SkillsIncompatibility = {
-    ["Airborne"] = {
+
+    --[[["Airborne"] = {
         "Opening Shot",
         "Rapid Fire Up"
-    },
+    },]]--
     ["Artillery"] = {
         "Blast Functionality",
         "Charge Up",
@@ -18,7 +19,7 @@ local SkillsIncompatibility = {
         "Critical Draw",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Power Prolonger",
@@ -66,8 +67,8 @@ local SkillsIncompatibility = {
         "Tetrad Shot"
     },
     ["Charge Master"] = {
-        "Horn Maestro",
-        "Opening Shot",
+        --"Horn Maestro",
+        --"Opening Shot",
         "Rapid Fire Up"
     },
     ["Charge Up"] = {
@@ -129,9 +130,9 @@ local SkillsIncompatibility = {
         "Razor Sharp",
         "Speed Sharpening"
     },
-    ["Focus"] = {
+    --[[["Focus"] = {
         "Horn Maestro"
-    },
+    },]]--
     ["Guard"] = {
         "Blast Functionality",
         "Charge Up",
@@ -171,10 +172,10 @@ local SkillsIncompatibility = {
         "Artillery",
         "Ballistics",
         "Blast Functionality",
-        "Charge Master",
+        --"Charge Master",
         "Charge Up",
         "Exhaust Functionality",
-        "Focus",
+        --"Focus",
         "Guard",
         "Guard Up",
         "Load Shells",
@@ -193,21 +194,21 @@ local SkillsIncompatibility = {
         "Tetrad Shot"
     },
     ["Load Shells"] = {
-        "Ballistics",
+        --"Ballistics",
         "Blast Functionality",
         "Charge Up",
         "Exhaust Functionality",
         "Horn Maestro",
-        "Normal Shots",
-        "Opening Shot",
-        "Para Functionality",
-        "Piercing Shots",
+        --"Normal Shots",
+        --"Opening Shot",
+        --"Para Functionality",
+        --"Piercing Shots",
         "Poison Functionality",
         "Rapid Fire Up",
         "Sleep Functionality",
-        "Special Ammo Boost",
-        "Spread/Power Shots",
-        "Tetrad Shot"
+        --"Special Ammo Boost",
+        --"Spread/Power Shots",
+        --"Tetrad Shot"
     },
     ["Master's Touch"] = {
         "Ballistics",
@@ -245,7 +246,7 @@ local SkillsIncompatibility = {
         "Critical Draw",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Power Prolonger",
@@ -266,15 +267,15 @@ local SkillsIncompatibility = {
         "Sleep Functionality"
     },
     ["Opening Shot"] = {
-        "Airborne",
+        --"Airborne",
         "Blast Functionality",
         "Bludgeoner",
-        "Charge Master",
+        --"Charge Master",
         "Critical Draw",
         "Exhaust Functionality",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Para Functionality",
@@ -315,7 +316,7 @@ local SkillsIncompatibility = {
         "Critical Draw",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Power Prolonger",
@@ -395,7 +396,7 @@ local SkillsIncompatibility = {
         "Tetrad Shot"
     },
     ["Rapid Fire Up"] = {
-        "Airborne",
+        --"Airborne",
         "Blast Functionality",
         "Bludgeoner",
         "Charge Master",
@@ -481,7 +482,7 @@ local SkillsIncompatibility = {
         "Critical Draw",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Power Prolonger",
@@ -512,7 +513,7 @@ local SkillsIncompatibility = {
         "Critical Draw",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Power Prolonger",
@@ -529,7 +530,7 @@ local SkillsIncompatibility = {
         "Critical Draw",
         "Handicraft",
         "Horn Maestro",
-        "Load Shells",
+        --"Load Shells",
         "Master's Touch",
         "Mind's Eye",
         "Power Prolonger",
