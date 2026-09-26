@@ -58,4 +58,13 @@ function Util.table_contains(table, value)
     return false
 end
 
+--- utility function to find the first index of a value in a list
+function Util.index_of(list, value)
+    for i, v in ipairs(list) do
+        if v == value then
+            return i
+        end
+    end
+end
+
 return Util
