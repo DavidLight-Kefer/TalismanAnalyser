@@ -136,4 +136,8 @@ function Decoder.get_talismans()
     return talisman_map
 end
 
+function Decoder.get_cached_methods()
+    return cached_methods
+end
+
 return Decoder

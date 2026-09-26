@@ -1,13 +1,34 @@
 local Decoder = require("talisman_analyser.decoder")
 local Analyser = require("talisman_analyser.analyser")
+local Skill = require("talisman_analyser.skill")
+local Slot = require("talisman_analyser.slot").Slot
+local SlotType = require("talisman_analyser.slot").Type
+local Talisman = require("talisman_analyser.talisman")
 local Util = require("talisman_analyser.util")
+
+local IMGUI_TABLE_FLAG_BORDERS = 1920
+local IMGUI_TABLE_FLAG_FIT_WIDTH = 8192
+local ABGR_GREEN = 0xFF00FF00
+local ABGR_RED = 0xFF0000FF
+local ABGR_YELLOW = 0xFF00FFFF
+local TALISMAN_MELDING_TYPE_DEFINITION_NAME = "app.GUI090700"
+local PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME = "app.GUI090700PartsMaterialList02"
+local SELECT_ITEM_TYPE_DEFINITION = "via.gui.SelectItem"
+local AUTO_SELECT_EXCEPTION_WARNING = "An Exception occurred: Reopen the Talisman Melding menu to re-enable auto-selecting!"
 
 local talismans_data
 local cached_all_output
 local cached_duplicate_output
 local cached_obsolete_output
-local force_slot_comparison = true
 local cached_contradiction_output
+local cached_material_list
+local force_slot_comparison = true
+local is_auto_select = false
+local failsafe = false
+local debug = false
+local cached_duplicated_auto_select_result = ""
+local cached_obsolete_auto_select_result = ""
+local cached_contradicting_auto_select_result = ""
 
 local window_states = {
     all_talismans = false,
@@ -15,8 +36,12 @@ local window_states = {
     obsolete_talismans = false
 }
 
-local IMGUI_TABLE_FLAG_BORDERS = 1920
-local IMGUI_TABLE_FLAG_FIT_WIDTH = 8192
+--- auxiliary function to log only if `debug` is enabled, a global `log.set_level("debug")` could lead to log spam
+local function log_if_debug(message)
+    if debug then
+        log.info(message)
+    end
+end
 
 --- function to generate output for all talismans
 local function generate_all_output(talismans)
@@ -78,12 +103,147 @@ local function generate_contradiction_output(talismans)
     return result
 end
 
+--- function to construct the status message of `auto_select()`
+local function construct_status_message(selected_amount, unselected_amount, failure_reasons)
+    local status_message = string.format("Auto-selected %d talismans, %d were not selected", selected_amount, unselected_amount)
+    for _, reason in ipairs(failure_reasons) do
+        status_message = status_message .. "\n" .. reason
+    end
+    return status_message
+end
+
+--- function to auto-select the given talismans at the melding pot
+local function auto_select(talismans_to_meld)
+    local to_meld_amount = #talismans_to_meld
+    log_if_debug("Trying to auto-select " .. to_meld_amount .. " talismans")
+    if not cached_material_list then
+        return "Not in the Talisman Melding menu!"
+    end
+    local success, result = pcall(function()
+        return cached_material_list._amuletDataList._items
+    end)
+    if not success then
+        log.error(result)
+        return "Could not get talisman list for auto-selecting, please try again!"
+    end
+    local talisman_list = result
+    success, result = pcall(function()
+        cached_material_list:get__PageControl():setPageFromIndex(0)
+    end)
+    if not success then
+        log.error(result)
+        return "Could not get talisman list for auto-selecting, please try again!"
+    end
+
+    local unselected_amount = 0
+    local failure_reasons = {}
+    is_auto_select = true
+    for index, talisman_data in pairs(talisman_list) do -- starts with 0, don't use ipairs()
+        local judge_result_data = talisman_data.JudgeResultData
+        local skill_object = {}
+        for _, skill in pairs(judge_result_data.Skills) do -- starts with 0, don't use ipairs()
+            local decoder_methods = Decoder.get_cached_methods()
+            local skill_enum = decoder_methods.get_skill_name:call(nil, skill.Skill)
+            local skill_name = ""
+            if skill_enum then
+                skill_name = decoder_methods.get_gui_message_with_language:call(nil, skill_enum, 1)
+                skill_name = skill_name and tostring(skill_name) or ""
+            end
+            -- ignore empty names and other objects (starting with "<")
+            if string.len(skill_name) > 0 and string.sub(skill_name, 1, 1) ~= "<" then
+                table.insert(skill_object, Skill.new(skill_name, skill.Lv))
+            end
+        end
+        local slot_object = {}
+        for _, slot in pairs(judge_result_data.Accessories) do -- starts with 0, don't use ipairs()
+            local slot_level = slot.SlotLv
+            if slot_level > 0 then
+                table.insert(slot_object, Slot.new(SlotType.type_from_number(slot.AccessoryType), slot_level))
+            end
+        end
+        local talisman_object = Talisman.new(skill_object, slot_object)
+        if Util.table_contains(talismans_to_meld, talisman_object) then
+            local is_chosen = talisman_data.IsChoose
+            local is_favorite = talisman_data:get_AmuletWork():isFavorite()
+            local selected, error
+            if not (is_chosen or is_favorite) then
+                selected, error = pcall(function()
+                    local select_item = sdk.find_type_definition(SELECT_ITEM_TYPE_DEFINITION):create_instance()
+                    select_item:set_ListIndex(index)
+                    select_item:set_CanSelect(true)
+                    select_item:set_CanDecide(true)
+                    cached_material_list:callbackDecide(cached_material_list._Control, select_item, index)
+                end)
+            else
+                selected = false
+                if is_chosen then
+                    table.insert(failure_reasons, tostring(talisman_object) .. " was already selected")
+                elseif is_favorite then
+                    table.insert(failure_reasons, tostring(talisman_object) .. " is a favorite")
+                end
+            end
+            if not selected then
+                log_if_debug("Could not select talisman (" .. tostring(talisman_object) .. "), index=" .. index ..
+                        ", is_chosen=" .. tostring(is_chosen) .. ", is_favorite=" .. tostring(is_favorite) .. ", error=" .. tostring(error))
+                unselected_amount = unselected_amount + 1
+                if error then -- prevent the user from melding the wrong talismans
+                    failsafe = true
+                    table.insert(failure_reasons, tostring(talisman_object) .. " threw an exception: " .. tostring(error))
+                    return construct_status_message(to_meld_amount - unselected_amount - #talismans_to_meld + 1, unselected_amount, failure_reasons)
+                end
+            end
+            table.remove(talismans_to_meld, Util.index_of(talismans_to_meld, talisman_object))
+        end
+    end
+    is_auto_select = false
+    cached_material_list = nil -- to have a fresh snapshot the next time
+
+    return construct_status_message(to_meld_amount - unselected_amount, unselected_amount, failure_reasons)
+end
+
+--- hook to get the `cached_material_list` from "Talisman Melding"
+sdk.hook(sdk.find_type_definition(PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME):get_method("onVisibleUpdate"), function(args)
+    if not cached_material_list then
+        cached_material_list = sdk.to_managed_object(args[2])
+    end
+end)
+
+--- hook to handle sorting during "Talisman Melding"
+sdk.hook(sdk.find_type_definition(PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME):get_method("applySort"), function(args)
+    cached_material_list = nil -- to have a fresh snapshot with the new indices
+end)
+
+--- hook to handle manual selecting during "Talisman Melding"
+sdk.hook(sdk.find_type_definition(PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME):get_method("callbackDecide"), function(args)
+    if not is_auto_select then
+        cached_material_list = nil -- to have a fresh snapshot after a manual selecting
+    end
+end)
+
+--- hook to handle favoritizing during "Talisman Melding"
+sdk.hook(sdk.find_type_definition(PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME):get_method("switchFavorite"), function(args)
+    cached_material_list = nil -- to have a fresh snapshot after favorite status change
+end)
+
+--- hook to reset the auto-selection cache after "Talisman Melding"
+sdk.hook(sdk.find_type_definition(TALISMAN_MELDING_TYPE_DEFINITION_NAME):get_method("onClose"), function(args)
+    cached_material_list = nil
+    cached_duplicated_auto_select_result = ""
+    cached_obsolete_auto_select_result = ""
+    cached_contradicting_auto_select_result = ""
+    failsafe = false
+end)
+
 --- function to add a "Script Generated UI" for this mod
 re.on_draw_ui(function()
     if not imgui.tree_node("Talisman Analyser") then
         return
     end
 
+    local changed, value = imgui.checkbox("Debug", debug)
+    if changed then
+        debug = value
+    end
     local analyser_button_text = talismans_data and "Re-Analyse Talismans" or "Analyse Talismans"
     if imgui.button(analyser_button_text) then
         local success, result = pcall(Decoder.get_talismans)
@@ -94,8 +254,12 @@ re.on_draw_ui(function()
             cached_duplicate_output = nil
             cached_obsolete_output = nil
             cached_contradiction_output = nil
+            cached_material_list = nil
+            cached_duplicated_auto_select_result = ""
+            cached_obsolete_auto_select_result = ""
+            cached_contradicting_auto_select_result = ""
         else
-            imgui.text_colored(result, 0xFF0000FF) -- error message in RGBA red
+            imgui.text_colored(tostring(result), ABGR_RED)
         end
     end
     if not talismans_data then
@@ -155,6 +319,28 @@ re.on_frame(function()
                 imgui.table_next_row()
             end
             imgui.end_table()
+            imgui.spacing()
+            if failsafe then
+                imgui.begin_disabled()
+            end
+            if imgui.button("Select for Melding") then
+                local duplicates = {}
+                for talisman, count in pairs(Analyser.find_duplicates_within_hashmap(talismans_data)) do
+                    -- leave 1 of each
+                    for _ = 1, count - 1 do
+                        table.insert(duplicates, talisman)
+                    end
+                end
+                cached_duplicated_auto_select_result = auto_select(duplicates)
+            end
+            if failsafe then
+                imgui.end_disabled()
+                imgui.same_line()
+                imgui.text_colored(AUTO_SELECT_EXCEPTION_WARNING, ABGR_YELLOW)
+                imgui.text_colored(cached_duplicated_auto_select_result, ABGR_RED)
+            else
+                imgui.text_colored(cached_duplicated_auto_select_result, ABGR_GREEN)
+            end
             imgui.end_window()
         end
         -- Obsolete Talismans Window
@@ -185,6 +371,26 @@ re.on_frame(function()
                 end
                 imgui.spacing()
             end
+            if failsafe then
+                imgui.begin_disabled()
+            end
+            if imgui.button("Select for Melding") then
+                local obsoletes = {}
+                for _, talismanList in pairs(Analyser.find_obsoletes_within_hashmap(talismans_data, force_slot_comparison)) do
+                    for _, talisman in ipairs(talismanList) do
+                        table.insert(obsoletes, talisman)
+                    end
+                end
+                cached_obsolete_auto_select_result = auto_select(obsoletes)
+            end
+            if failsafe then
+                imgui.end_disabled()
+                imgui.same_line()
+                imgui.text_colored(AUTO_SELECT_EXCEPTION_WARNING, ABGR_YELLOW)
+                imgui.text_colored(cached_obsolete_auto_select_result, ABGR_RED)
+            else
+                imgui.text_colored(cached_obsolete_auto_select_result, ABGR_GREEN)
+            end
             imgui.end_window()
         end
         -- Contradicting Talismans Window
@@ -197,6 +403,21 @@ re.on_frame(function()
             imgui.spacing()
             for i = 2, #cached_contradiction_output do
                 imgui.text(cached_contradiction_output[i])
+            end
+            imgui.spacing()
+            if failsafe then
+                imgui.begin_disabled()
+            end
+            if imgui.button("Select for Melding") then
+                cached_contradicting_auto_select_result = auto_select(Analyser.find_contradictions_within_hashmap(talismans_data))
+            end
+            if failsafe then
+                imgui.end_disabled()
+                imgui.same_line()
+                imgui.text_colored(AUTO_SELECT_EXCEPTION_WARNING, ABGR_YELLOW)
+                imgui.text_colored(cached_contradicting_auto_select_result, ABGR_RED)
+            else
+                imgui.text_colored(cached_contradicting_auto_select_result, ABGR_GREEN)
             end
             imgui.end_window()
         end
