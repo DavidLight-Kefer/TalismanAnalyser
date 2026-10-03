@@ -8,13 +8,10 @@ local Util = require("talisman_analyser.util")
 
 local IMGUI_TABLE_FLAG_BORDERS = 1920
 local IMGUI_TABLE_FLAG_FIT_WIDTH = 8192
-local ABGR_GREEN = 0xFF00FF00
 local ABGR_RED = 0xFF0000FF
-local ABGR_YELLOW = 0xFF00FFFF
 local TALISMAN_MELDING_TYPE_DEFINITION_NAME = "app.GUI090700"
 local PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME = "app.GUI090700PartsMaterialList02"
 local SELECT_ITEM_TYPE_DEFINITION = "via.gui.SelectItem"
-local AUTO_SELECT_EXCEPTION_WARNING = "An Exception occurred: Reopen the Talisman Melding menu to re-enable auto-selecting!"
 
 local talismans_data
 local cached_all_output
@@ -22,9 +19,9 @@ local cached_duplicate_output
 local cached_obsolete_output
 local cached_contradiction_output
 local cached_material_list
+local cached_page_control
 local force_slot_comparison = true
 local is_auto_select = false
-local failsafe = false
 local debug = false
 local cached_duplicated_auto_select_result = ""
 local cached_obsolete_auto_select_result = ""
@@ -103,9 +100,23 @@ local function generate_contradiction_output(talismans)
     return result
 end
 
---- function to construct the status message of `auto_select()`
-local function construct_status_message(selected_amount, unselected_amount, failure_reasons)
-    local status_message = string.format("Auto-selected %d talismans, %d were not selected", selected_amount, unselected_amount)
+--- function to properly finish or cancel `auto_select()`
+local function end_auto_select(original_page_index, selected_amount, unselected_amount, failure_reasons)
+    local success, result = pcall(function()
+        -- if the player was on page 0 change the page once to force UI update
+        local items_per_page = cached_page_control:get_ItemNumOnPage()
+        if original_page_index < items_per_page and cached_page_control:get__MaxElementNum() > items_per_page then
+            cached_page_control:setPageFromIndex(items_per_page)
+        end
+        cached_page_control:setPageFromIndex(original_page_index)
+    end)
+    if not success then
+        log.error("Resetting the page failed: original_page_index=" .. original_page_index .. ", error=" .. result)
+    end
+    is_auto_select = false
+    cached_material_list = nil -- to have a fresh snapshot the next time
+    cached_page_control = nil
+    local status_message = string.format("Auto-selected %d talismans, %d were not selected:", selected_amount, unselected_amount)
     for _, reason in ipairs(failure_reasons) do
         status_message = status_message .. "\n" .. reason
     end
@@ -124,19 +135,22 @@ local function auto_select(talismans_to_meld)
     end)
     if not success then
         log.error(result)
-        return "Could not get talisman list for auto-selecting, please try again!"
+        return "Could not get talisman material list, please try again!"
     end
     local talisman_list = result
     success, result = pcall(function()
-        cached_material_list:get__PageControl():setPageFromIndex(0)
+        local page_index = cached_page_control:getCurrentPage() * cached_page_control:get_ItemNumOnPage()
+        cached_page_control:setPageFromIndex(0)
+        return page_index
     end)
     if not success then
         log.error(result)
-        return "Could not get talisman list for auto-selecting, please try again!"
+        return "Could not get page control of talisman material list, please try again!"
     end
+    local original_page_index = result
 
     local unselected_amount = 0
-    local failure_reasons = {}
+    local not_select_reasons = {}
     is_auto_select = true
     for index, talisman_data in pairs(talisman_list) do -- starts with 0, don't use ipairs()
         local judge_result_data = talisman_data.JudgeResultData
@@ -163,10 +177,11 @@ local function auto_select(talismans_to_meld)
         end
         local talisman_object = Talisman.new(skill_object, slot_object)
         if Util.table_contains(talismans_to_meld, talisman_object) then
-            local is_chosen = talisman_data.IsChoose
             local is_favorite = talisman_data:get_AmuletWork():isFavorite()
+            local is_equipped = talisman_data.IsFitting
+            local is_chosen = talisman_data.IsChoose
             local selected, error
-            if not (is_chosen or is_favorite) then
+            if not (is_favorite or is_equipped or is_chosen) then
                 selected, error = pcall(function()
                     local select_item = sdk.find_type_definition(SELECT_ITEM_TYPE_DEFINITION):create_instance()
                     select_item:set_ListIndex(index)
@@ -176,35 +191,38 @@ local function auto_select(talismans_to_meld)
                 end)
             else
                 selected = false
-                if is_chosen then
-                    table.insert(failure_reasons, tostring(talisman_object) .. " was already selected")
-                elseif is_favorite then
-                    table.insert(failure_reasons, tostring(talisman_object) .. " is a favorite")
+                if is_favorite then
+                    table.insert(not_select_reasons, tostring(talisman_object) .. " is a favorite")
+                elseif is_equipped then
+                    table.insert(not_select_reasons, tostring(talisman_object) .. " is currently equipped")
+                elseif is_chosen then
+                    table.insert(not_select_reasons, tostring(talisman_object) .. " was already selected")
+
                 end
             end
             if not selected then
                 log_if_debug("Could not select talisman (" .. tostring(talisman_object) .. "), index=" .. index ..
-                        ", is_chosen=" .. tostring(is_chosen) .. ", is_favorite=" .. tostring(is_favorite) .. ", error=" .. tostring(error))
+                        ", is_favorite=" .. tostring(is_favorite) .. ", is_equipped=" .. tostring(is_equipped) .. ", is_chosen=" ..
+                        tostring(is_chosen) .. ", error=" .. tostring(error))
                 unselected_amount = unselected_amount + 1
-                if error then -- prevent the user from melding the wrong talismans
-                    failsafe = true
-                    table.insert(failure_reasons, tostring(talisman_object) .. " threw an exception: " .. tostring(error))
-                    return construct_status_message(to_meld_amount - unselected_amount - #talismans_to_meld + 1, unselected_amount, failure_reasons)
+                if error then
+                    table.insert(not_select_reasons, tostring(talisman_object) .. " caused an error") -- can be ignored
                 end
             end
             table.remove(talismans_to_meld, Util.index_of(talismans_to_meld, talisman_object))
         end
     end
-    is_auto_select = false
-    cached_material_list = nil -- to have a fresh snapshot the next time
 
-    return construct_status_message(to_meld_amount - unselected_amount, unselected_amount, failure_reasons)
+    return end_auto_select(original_page_index, to_meld_amount - unselected_amount, unselected_amount, not_select_reasons)
 end
 
---- hook to get the `cached_material_list` from "Talisman Melding"
+--- hook to get the material list and its page control from "Talisman Melding"
 sdk.hook(sdk.find_type_definition(PARTS_MATERIAL_LIST_02_TYPE_DEFINITION_NAME):get_method("onVisibleUpdate"), function(args)
     if not cached_material_list then
         cached_material_list = sdk.to_managed_object(args[2])
+    end
+    if not cached_page_control then
+        cached_page_control = cached_material_list:get__PageControl()
     end
 end)
 
@@ -228,10 +246,10 @@ end)
 --- hook to reset the auto-selection cache after "Talisman Melding"
 sdk.hook(sdk.find_type_definition(TALISMAN_MELDING_TYPE_DEFINITION_NAME):get_method("onClose"), function(args)
     cached_material_list = nil
+    cached_page_control = nil
     cached_duplicated_auto_select_result = ""
     cached_obsolete_auto_select_result = ""
     cached_contradicting_auto_select_result = ""
-    failsafe = false
 end)
 
 --- function to add a "Script Generated UI" for this mod
@@ -255,11 +273,13 @@ re.on_draw_ui(function()
             cached_obsolete_output = nil
             cached_contradiction_output = nil
             cached_material_list = nil
+            cached_page_control = nil
             cached_duplicated_auto_select_result = ""
             cached_obsolete_auto_select_result = ""
             cached_contradicting_auto_select_result = ""
         else
-            imgui.text_colored(tostring(result), ABGR_RED)
+            log.error(result)
+            imgui.text_colored("Could not analyse talismans, please try again!", ABGR_RED)
         end
     end
     if not talismans_data then
@@ -320,9 +340,6 @@ re.on_frame(function()
             end
             imgui.end_table()
             imgui.spacing()
-            if failsafe then
-                imgui.begin_disabled()
-            end
             if imgui.button("Select for Melding") then
                 local duplicates = {}
                 for talisman, count in pairs(Analyser.find_duplicates_within_hashmap(talismans_data)) do
@@ -333,14 +350,7 @@ re.on_frame(function()
                 end
                 cached_duplicated_auto_select_result = auto_select(duplicates)
             end
-            if failsafe then
-                imgui.end_disabled()
-                imgui.same_line()
-                imgui.text_colored(AUTO_SELECT_EXCEPTION_WARNING, ABGR_YELLOW)
-                imgui.text_colored(cached_duplicated_auto_select_result, ABGR_RED)
-            else
-                imgui.text_colored(cached_duplicated_auto_select_result, ABGR_GREEN)
-            end
+            imgui.text(cached_duplicated_auto_select_result)
             imgui.end_window()
         end
         -- Obsolete Talismans Window
@@ -371,9 +381,6 @@ re.on_frame(function()
                 end
                 imgui.spacing()
             end
-            if failsafe then
-                imgui.begin_disabled()
-            end
             if imgui.button("Select for Melding") then
                 local obsoletes = {}
                 for _, talismanList in pairs(Analyser.find_obsoletes_within_hashmap(talismans_data, force_slot_comparison)) do
@@ -383,14 +390,7 @@ re.on_frame(function()
                 end
                 cached_obsolete_auto_select_result = auto_select(obsoletes)
             end
-            if failsafe then
-                imgui.end_disabled()
-                imgui.same_line()
-                imgui.text_colored(AUTO_SELECT_EXCEPTION_WARNING, ABGR_YELLOW)
-                imgui.text_colored(cached_obsolete_auto_select_result, ABGR_RED)
-            else
-                imgui.text_colored(cached_obsolete_auto_select_result, ABGR_GREEN)
-            end
+            imgui.text(cached_obsolete_auto_select_result)
             imgui.end_window()
         end
         -- Contradicting Talismans Window
@@ -404,21 +404,10 @@ re.on_frame(function()
             for i = 2, #cached_contradiction_output do
                 imgui.text(cached_contradiction_output[i])
             end
-            imgui.spacing()
-            if failsafe then
-                imgui.begin_disabled()
-            end
             if imgui.button("Select for Melding") then
                 cached_contradicting_auto_select_result = auto_select(Analyser.find_contradictions_within_hashmap(talismans_data))
             end
-            if failsafe then
-                imgui.end_disabled()
-                imgui.same_line()
-                imgui.text_colored(AUTO_SELECT_EXCEPTION_WARNING, ABGR_YELLOW)
-                imgui.text_colored(cached_contradicting_auto_select_result, ABGR_RED)
-            else
-                imgui.text_colored(cached_contradicting_auto_select_result, ABGR_GREEN)
-            end
+            imgui.text(cached_contradicting_auto_select_result)
             imgui.end_window()
         end
     end
