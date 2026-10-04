@@ -1,13 +1,18 @@
-local Util = require("talisman_analyser.util")
+local Util = require("lib.util")
 
+---@class Slot
+---@field type Type
+---@field rank integer
 local Slot = {}
 Slot.__index = Slot
 
+---@param type Type
+---@param rank integer
 function Slot.new(type, rank)
-    local self = setmetatable({}, Slot)
-    self.type = type
-    self.rank = rank
-    return self
+    return setmetatable({
+        type = type,
+        rank = rank,
+    } --[[@as Slot]], Slot)
 end
 
 function Slot:__eq(other)
@@ -21,6 +26,7 @@ function Slot:__tostring()
     return self.type .. " " .. self.rank
 end
 
+---@enum Type
 local Type = {
     ARMOR = "ARMOR",
     WEAPON = "WEAPON"
@@ -30,3 +36,4 @@ return {
     Slot = Slot,
     Type = Type
 }
+

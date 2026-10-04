@@ -1,13 +1,19 @@
-local Util = require("talisman_analyser.util")
+local Util = require("lib.util")
 
+---@class Skill
+---@field name string
+---@field level integer
 local Skill = {}
 Skill.__index = Skill
 
+---@param name string
+---@param level integer
+---@return Skill
 function Skill.new(name, level)
-    local self = setmetatable({}, Skill)
-    self.name = name
-    self.level = level
-    return self
+    return setmetatable({
+        name = name,
+        level = level,
+    } --[[@as Skill]], Skill)
 end
 
 function Skill:__eq(other)

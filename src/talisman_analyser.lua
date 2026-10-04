@@ -1,6 +1,6 @@
-local Decoder = require("talisman_analyser.decoder")
-local Analyser = require("talisman_analyser.analyser")
-local Util = require("talisman_analyser.util")
+local Decoder = require("lib.decoder")
+local Analyser = require("lib.analyser")
+local Util = require("lib.util")
 
 local talismans_data
 local cached_all_output
@@ -12,7 +12,8 @@ local cached_contradiction_output
 local window_states = {
     all_talismans = false,
     duplicated_talismans = false,
-    obsolete_talismans = false
+    obsolete_talismans = false,
+    contradicting_talismans = false,
 }
 
 local IMGUI_TABLE_FLAG_BORDERS = 1920
@@ -102,16 +103,16 @@ re.on_draw_ui(function()
         imgui.begin_disabled()
     end
     if imgui.button("Show All Talismans") then
-        window_states.all_talismans = true
+        window_states.all_talismans = not window_states.all_talismans
     end
     if imgui.button("Show Duplicated Talismans") then
-        window_states.duplicated_talismans = true
+        window_states.duplicated_talismans = not window_states.duplicated_talismans
     end
     if imgui.button("Show Obsolete Talismans") then
-        window_states.obsolete_talismans = true
+        window_states.obsolete_talismans = not window_states.obsolete_talismans
     end
     if imgui.button("Show Contradicting Talismans") then
-        window_states.contradicting_talismans = true
+        window_states.contradicting_talismans = not window_states.contradicting_talismans
     end
     if not talismans_data then
         imgui.end_disabled()
@@ -171,7 +172,8 @@ re.on_frame(function()
             imgui.same_line()
             imgui.text("(?)")
             if imgui.is_item_hovered() then
-                imgui.set_tooltip("If enabled Slots must always be better or equal, otherwise Slots are only compared when Skills are equal")
+                imgui.set_tooltip(
+                    "If enabled Slots must always be better or equal, otherwise Slots are only compared when Skills are equal")
             end
             imgui.spacing()
             imgui.text(cached_obsolete_output[1])

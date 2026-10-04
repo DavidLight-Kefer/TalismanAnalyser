@@ -1,7 +1,8 @@
-local Skill = require("talisman_analyser.skill")
-local Slot = require("talisman_analyser.slot").Slot
-local SlotType = require("talisman_analyser.slot").Type
-local Talisman = require("talisman_analyser.talisman")
+local Skill = require("lib.skill")
+local slot_lib = require("lib.slot")
+local Slot = slot_lib.Slot
+local SlotType = slot_lib.Type
+local Talisman = require("lib.talisman")
 
 -- Talisman Data Export by Ninull (adjusted) --
 local Decoder = {}
