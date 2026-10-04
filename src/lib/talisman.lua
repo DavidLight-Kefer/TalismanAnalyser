@@ -18,7 +18,7 @@ function Talisman.new(skills, slots)
         id = _next_id,
         skills = skills or {},
         slots = slots or {},
-    }, Talisman)
+    } --[[@as Talisman]], Talisman)
     _next_id = _next_id + 1
     return self
 end
