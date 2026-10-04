@@ -1,6 +1,6 @@
-local Decoder = require("talisman_analyser.decoder")
-local Analyser = require("talisman_analyser.analyser")
-local Util = require("talisman_analyser.util")
+local Decoder = require("lib.decoder")
+local Analyser = require("lib.analyser")
+local Util = require("lib.util")
 
 local talismans_data
 local cached_all_output
@@ -171,7 +171,8 @@ re.on_frame(function()
             imgui.same_line()
             imgui.text("(?)")
             if imgui.is_item_hovered() then
-                imgui.set_tooltip("If enabled Slots must always be better or equal, otherwise Slots are only compared when Skills are equal")
+                imgui.set_tooltip(
+                    "If enabled Slots must always be better or equal, otherwise Slots are only compared when Skills are equal")
             end
             imgui.spacing()
             imgui.text(cached_obsolete_output[1])

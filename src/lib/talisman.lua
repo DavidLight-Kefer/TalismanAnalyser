@@ -1,17 +1,25 @@
-local Util = require("talisman_analyser.util")
-local SkillsIncompatibility = require("talisman_analyser.skills_incompatibility")
+local Util = require("lib.util")
+local SkillsIncompatibility = require("lib.skills_incompatibility")
 
+---@class Talisman
+---@field id integer
+---@field skills Skill[]
+---@field slots Slot[]
 local Talisman = {}
 Talisman.__index = Talisman
 
 local _next_id = 0
 
+---@param skills Skill[]
+---@param slots Slot[]
+---@return Talisman
 function Talisman.new(skills, slots)
-    local self = setmetatable({}, Talisman)
-    self.id = _next_id
+    local self = setmetatable({
+        id = _next_id,
+        skills = skills or {},
+        slots = slots or {},
+    } --[[@as Talisman]], Talisman)
     _next_id = _next_id + 1
-    self.skills = skills or {}
-    self.slots = slots or {}
     return self
 end
 
