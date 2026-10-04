@@ -35,3 +35,6 @@ bin/
 ### Lua ###
 artefacts/
 **/debugger.lua
+
+### General ###
+.env/
