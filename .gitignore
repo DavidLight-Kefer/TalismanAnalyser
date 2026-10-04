@@ -37,4 +37,4 @@ artefacts/
 **/debugger.lua
 
 ### General ###
-.env/
+.env
