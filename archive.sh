@@ -2,6 +2,8 @@
 
 set -e
 
+[ -f '.env' ] && source '.env'
+
 start_dir="$(pwd)"
 
 [ $# -lt 1 ] && echo "Usage: ./archive.sh <version>" >&2 && exit 1
