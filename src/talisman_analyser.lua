@@ -12,7 +12,8 @@ local cached_contradiction_output
 local window_states = {
     all_talismans = false,
     duplicated_talismans = false,
-    obsolete_talismans = false
+    obsolete_talismans = false,
+    contradicting_talismans = false,
 }
 
 local IMGUI_TABLE_FLAG_BORDERS = 1920
@@ -102,16 +103,16 @@ re.on_draw_ui(function()
         imgui.begin_disabled()
     end
     if imgui.button("Show All Talismans") then
-        window_states.all_talismans = true
+        window_states.all_talismans = not window_states.all_talismans
     end
     if imgui.button("Show Duplicated Talismans") then
-        window_states.duplicated_talismans = true
+        window_states.duplicated_talismans = not window_states.duplicated_talismans
     end
     if imgui.button("Show Obsolete Talismans") then
-        window_states.obsolete_talismans = true
+        window_states.obsolete_talismans = not window_states.obsolete_talismans
     end
     if imgui.button("Show Contradicting Talismans") then
-        window_states.contradicting_talismans = true
+        window_states.contradicting_talismans = not window_states.contradicting_talismans
     end
     if not talismans_data then
         imgui.end_disabled()
