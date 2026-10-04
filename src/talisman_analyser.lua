@@ -2,9 +2,6 @@ local Decoder = require("lib.decoder")
 local Analyser = require("lib.analyser")
 local Util = require("lib.util")
 
-local ui = require("lib.ui")
-ui.init()
-
 local talismans_data
 local cached_all_output
 local cached_duplicate_output
