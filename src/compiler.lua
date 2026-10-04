@@ -1,7 +1,9 @@
+local directory_separator = package.config:sub(1, 1)
+
 ---@param module_path string
 ---@return string
 local function module_to_path(module_path)
-  local path = module_path:gsub("%.", "/")
+  local path = module_path:gsub("%.", directory_separator)
   return path .. ".lua"
 end
 
@@ -170,15 +172,30 @@ local function run_command(command)
   return result
 end
 
+-- Determine OS using package.config
+local is_windows = (directory_separator == "\\")
+
 local files = {
   "talisman_analyser.lua",
 }
 
 -- Automatically add all new modifier files
-local paths = run_command("find lib -name '*.lua' | grep -v '.*\\.d\\.lua'")
-if paths then
-  for path in paths:gmatch("(.-)\n") do
-    files[#files + 1] = path
+local command
+if is_windows then
+  command = "powershell -Command \"Get-ChildItem -Path lib -Recurse -Filter *.lua | Where-Object { $_.FullName -notmatch '\\.d\\.lua$' } | "..
+            "ForEach-Object { $_.FullName -replace [regex]::Escape((Get-Location).Path + '\\'), '' }\""
+else
+  command = "find lib -name '*.lua' | grep -v '.*\\.d\\.lua'"
+end
+
+if command then
+  local paths = run_command(command)
+  if paths then
+    for path in paths:gmatch("(.-)\n") do
+      if path:match("%.lua$") then
+        files[#files + 1] = path
+      end
+    end
   end
 end
 
