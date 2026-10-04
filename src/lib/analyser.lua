@@ -1,5 +1,5 @@
-local SlotType = require("talisman_analyser.slot").Type
-local Util = require("talisman_analyser.util")
+local SlotType = require("lib.slot").Type
+local Util = require("lib.util")
 
 local Analyser = {}
 local skill_map_cache = {}
@@ -37,8 +37,10 @@ end
 
 --- function to determine if talisman has better slots than other_talisman; -1 -> worse, 0 -> equal, 1 -> better
 local function compare_slots(talisman, other_talisman)
-    local weapon_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.WEAPON), get_ranks_sorted(other_talisman, SlotType.WEAPON))
-    local armor_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.ARMOR), get_ranks_sorted(other_talisman, SlotType.ARMOR))
+    local weapon_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.WEAPON),
+        get_ranks_sorted(other_talisman, SlotType.WEAPON))
+    local armor_comparison = compare_slot_ranks(get_ranks_sorted(talisman, SlotType.ARMOR),
+        get_ranks_sorted(other_talisman, SlotType.ARMOR))
     if weapon_comparison == -1 or armor_comparison == -1 then
         return -1
     elseif weapon_comparison == 1 or armor_comparison == 1 then
@@ -220,3 +222,4 @@ function Analyser.find_contradictions_within_hashmap(talisman_map)
 end
 
 return Analyser
+
