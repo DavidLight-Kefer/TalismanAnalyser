@@ -30,11 +30,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-/AGENTS.md
 
 ### Lua ###
 artefacts/
 **/debugger.lua
 
 ### General ###
+AGENTS.md
 .env
