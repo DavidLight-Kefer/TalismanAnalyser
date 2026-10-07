@@ -40,19 +40,15 @@ Set-Location -Path "artefacts"
 New-Item -ItemType Directory -Path "tmp\reframework\autorun" -Force
 Move-Item -Path "..\src\output.lua" -Destination "tmp\reframework\autorun\talisman_analyser.lua"
 
-Set-Content -Path "tmp\modinfo.ini" -Value @"
-name=Talisman Analyser
-version=$VERSION
-description=Analyse your Appraised Talismans to find Duplicates and Obsoletes.
-screenshot=screenshot.png
-author=DavidLight
-"@
+Copy-Item -Path "..\nexus\modinfo.ini" -Destination "tmp"
+# Append version line to modinfo.ini
+Add-Content -Path "tmp\modinfo.ini" -Value "`nversion=$VERSION"
 
 # Shrink image if possible
 if (Get-Command "magick" -ErrorAction SilentlyContinue) {
-    & magick "../images/screenshot.png" -resize 25% "tmp\screenshot.png"
+    & magick "..\nexus\screenshot.png" -resize 25% "tmp\screenshot.png"
 } else {
-    Copy-Item -Path "../images/screenshot.png" -Destination "tmp"
+    Copy-Item -Path "..\nexus\screenshot.png" -Destination "tmp"
 }
 
 Move-Item -Path "tmp" -Destination $FOLDER_NAME
