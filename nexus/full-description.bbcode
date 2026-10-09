@@ -1,15 +1,18 @@
 [b][size=5]Description[/size][/b]
-[color=#d4d4d8]With this mod you can analyse your Appraised Talismans to find those you don't need, either because you own them multiple times or a better one. [b]It only shows the Talismans[/b], you decide yourself if you want to sell, meld or leave them.[/color]
+[color=#d4d4d8]With this mod you can analyse your Appraised Talismans to find those you don't need, either because you own them multiple times or a better one or when there is no Weapon Type which can utilize all its Skills (details below). It also features an auto-selection of those Talismans at the Melding Pot![/color]
 [color=#d4d4d8][size=3][b]Does NOT include craftable Talismans![/b][/size][/color]
 
 [b][size=5]Main features[/size][/b]
 [list]
 [*][color=#d4d4d8]view all your Appraised Talismans including how many you own[/color][/*]
 [*][color=#d4d4d8]view your duplicated Appraised Talismans and how many times you own each[/color][/*]
-[*]view your obsolete Appraised Talismans including the better ones
+[*]view your obsolete Appraised Talismans including those that are better
 [list]
 [*]comes with an option to not compare Slots if the Skills are better[/*]
 [/list]
+[/*]
+[*]view your Appraised Talismans with contradicting Skills[/*]
+[*]auto-select the Talismans of each category at the Melding Pot, respecting favorites and manual selection
 [/*]
 [/list]
 
@@ -33,22 +36,39 @@ A Talisman has better Slots when either:
 [*]the Talisman has the same Slot(type)s but at least one Slot is on a higher level[/*]
 [*]the Talisman has the same Slot(type)s plus an additional one(s)[/*]
 [/list]
-[img]https://staticdelivery.nexusmods.com/images/6993/175266303-1779660518.png[/img]
+[center][img]https://staticdelivery.nexusmods.com/images/6993/175266303-1779660518.png[/img][/center]
+
+[b][size=5]Definition of contradicting Talismans[/size][/b]
+A Talisman is considered contradicting when there is no Weapon type which can utilize all its Skills.
+Examples:
+[list]
+[*][i]Tetrad Shot[/i] only works on Ranged Weapons (Heavy Bowgun, Light Bowgun, Bow) but [i]Razor Sharp[/i] only works on Melee Weapons, this means a Talisman with both Skills cannot be fully utilized unless switching between a Ranged and a Melee Weapon mid-hunt.[/*]
+[*][i]Horn Maestro[/i] only affects Hunting Horn but a Hunting Horn is not affected by guarding Skills ([i]Guard[/i], [i]Guard Up[/i], [i]Offensive Guard[/i]). A Talisman with [i]Horn Maestro[/i] and (at least) one of the guarding Skills is considered contradicting.[/*]
+[/list]
+[b][color=#ffff00]ATTENTION: The DLC might change Skill compatibilities on some Weapons![/color][/b]
+I tried my best to adapt this feature based on the Boosted Action Breakdown videos but those are just guesses! For example: A Talisman with [i]Rapid Fire Up[/i] and [i]Airborne[/i] is no longer considered contradicting.
 
 [b][size=5]Usage[/size][/b]
-
-[center][color=#ffff00][size=4][b]I'm currently working on a way to automatically select the talismans in the melding pot UI.[/b][/size][/color][/center]
-
 [list=1]
 [*]click on "Analyse Talismans"[/*]
-[*]click on either "Show Duplicated Talismans" or "Show Obsolete Talismans"[/*]
-[*]in the Camp or the Melding Pot menu use the sorting functionality to sort by one of the Talisman's Skills
-[img]https://staticdelivery.nexusmods.com/images/6993/175266303-1779661860.png[/img][/*]
-[*]identify the Talismans based on their Skills and Slots
-[img]https://staticdelivery.nexusmods.com/images/6993/175266303-1779661915.png[/img][/*]
-[*][color=#cc0000][b]double check if you really want to sell/meld that Talisman! [/b][/color][/*]
-[*]after selling/melding some talismans click on "Re-Analyse Talismans" (replaced "Analyse Talismans") to remove them from the list[/*]
+[*]click on either "Show Duplicated Talismans", "Show Obsolete Talismans" or "Show Contradicting Talismans" [/*]
+[*]in Melding Pot menu click on "Select for Melding" to auto-select them[/*]
+[*][color=#cc0000][b]double check if you really want to meld those Talismans! [/b][/color][/*]
+[*]meld the selected Talismans with the in-game "Meld" button[/*]
 [/list]
+[center][img width=822]https://staticdelivery.nexusmods.com/mods/6993/images/4472/4472-1791567839-569761782.png[/img][/center]
+
+[b][size=5]Known issues[/size][/b]
+[list]
+[*]After using the auto-select feature the in-game "Glowing Stone" counter and the "Required Melding Points" counter is mostly inaccurate. [b]But the confirmation windows are accurate![/b] When the confirmation window asks to "discard x surplus points", you actually have x/10 surplus Melding Points! And when it wants to "use these materials to meld y item(s)" you will get y item(s)![/*]
+[/list]
+[center][b][img width=812]https://staticdelivery.nexusmods.com/mods/6993/images/4472/4472-1791568103-1782110478.png[/img][/b]
+[left][list]
+[*]There is a rare bug of the auto-selection feature trying to start the melding process on its own, most of the time without a single Talisman being selected/sufficient melding points. In that case "Cancel" the confirmation and/or press "No" until the confirmation window goes away. Then you can continue.[/*]
+[/list]
+[center][img width=814]https://staticdelivery.nexusmods.com/mods/6993/images/4472/4472-1791568844-1926534507.png[/img][/center]
+[/left]
+[/center]
 
 [b][size=5]Installation instructions[/size][/b]
 use Fluffy Mod Manager
@@ -60,5 +80,5 @@ use Fluffy Mod Manager
 [url=https://github.com/DavidLight-Kefer/TalismanAnalyser]GitHub[/url]
 
 [b][size=5]Shout outs[/size][/b]
-[color=#D4D4D8][url=https://www.nexusmods.com/profile/ninull]Ninull[/url] for explicitly allowing others to use and modify his [url=https://www.nexusmods.com/monsterhunterwilds/mods/3652]Talisman Data Export[/url] mod (to load the user's talismans in memory).[/color]
+[color=#D4D4D8][url=https://www.nexusmods.com/profile/ninull]Ninull[/url] for explicitly allowing others to use and modify his [url=https://www.nexusmods.com/monsterhunterwilds/mods/3652]Talisman Data Export[/url] mod (to load the user's talismans for analysing).[/color]
 [color=#D4D4D8][url=https://www.nexusmods.com/profile/HoloTheSober]HoloTheSober[/url] for helping me with the mods UI.[/color]
